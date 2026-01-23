@@ -1,0 +1,10 @@
+@* p.206 [Add] Razoreデリゲートをビューヘルパーに渡す *@
+@model IEnumerable<SelfAspNetCore.Models.Book>
+
+@{
+    ViewData["Title"] = "List2";
+}
+
+@Html.BookList(Model,
+               @<a href="https://wings.msn.to/index.php/-/A-03/@item.Isbn/">@item.Title</a> // @テンプレート
+      )

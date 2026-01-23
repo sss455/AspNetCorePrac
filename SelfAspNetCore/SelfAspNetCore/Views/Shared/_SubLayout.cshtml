@@ -1,0 +1,16 @@
+﻿@* p.187 [Add] レイアウトを入れ子に配置する *@
+@* 子レイアウトを定義 *@
+@{
+    @* 親レイアウトを呼び出す *@
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>WINGSプロジェクト</h4>
+<img src="http://wings.msn.to/image/wings.jpg" />
+子レイアウト(Views/Shared/_SubLayout.cshtml)
+<hr />
+<div>
+    @* 個別のテンプレートを読み込む *@
+    @RenderBody()
+</div>
+URL：<a href="https://wings.msn.to/">https://wings.msn.to/</a>

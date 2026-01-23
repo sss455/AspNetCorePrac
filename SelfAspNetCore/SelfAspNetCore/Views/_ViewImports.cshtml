@@ -1,0 +1,12 @@
+﻿@* テンプレート共通で利用する名前空間を登録する *@
+@using SelfAspNetCore
+@using SelfAspNetCore.Models
+
+@* p.154 [Add] 自作のビューヘルパーの名前空間を登録 *@
+@using SelfAspNetCore.Helpers
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@* p.168 [Add] 自作のタグヘルパーを登録　*@
+@* p.199 [〃]  ビューコンポーネントを有効化 *@
+@*（SelfAspNetCoreアセンブリ(プロジェクト)のすべてのヘルパー(*)を有効にする）*@
+@addTagHelper *, SelfAspNetCore

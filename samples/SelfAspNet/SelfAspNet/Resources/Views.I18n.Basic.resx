@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="Hello" xml:space="preserve">
+        <value>Hello!!</value>
+    </data>
+    <data name="Current" xml:space="preserve">
+        <value>&lt;b&gt;Today is {0}.&lt;/b&gt;</value>
+    </data>
+</root>

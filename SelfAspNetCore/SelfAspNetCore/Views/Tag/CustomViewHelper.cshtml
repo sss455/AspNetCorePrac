@@ -1,0 +1,18 @@
+@* _ViewImports.chtmlに名前空間を登録したためusingディレクティブを削除 *@
+@* @using SelfAspNetCore.Helpers *@
+
+@{
+    ViewData["Title"] = "CustomViewHelper";
+
+    var msg = "WINGSプロジェクトは、ライター山田太郎が務める執筆コミュニティです。";
+}
+
+@* p.154 [Add] 自作のビューヘルパーをテンプレートから呼び出し *@
+@* @StringHelpers.Truncate(msg, 10, "～") *@
+@*    ↓                                   *@
+@* p.156 [Add] StringHelpers.TruncateをHtmlオブジェクトの拡張メソッドとして追加 *@
+@Html.Truncate(msg, 10, "～")
+<br /><br />
+
+@* p.158 HTML文字列を生成する自作ビューヘルパー *@
+@Html.Cover("978-4-8156-1948-0", new { title = "React実践入門編"} );

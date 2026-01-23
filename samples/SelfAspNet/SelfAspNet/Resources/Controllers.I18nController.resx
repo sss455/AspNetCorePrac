@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="Night" xml:space="preserve">
+        <value>Good Night!!</value>
+    </data>
+    <data name="Time" xml:space="preserve">
+        <value>&lt;b&gt;Now is {0}.&lt;/b&gt;</value>
+    </data>
+</root>

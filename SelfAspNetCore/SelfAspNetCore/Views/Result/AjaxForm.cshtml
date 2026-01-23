@@ -1,0 +1,43 @@
+@* p.337 [Add] ページを部分更新するーーPartialViewResultクラス *@
+@{
+    ViewData["Title"] = "AjaxForm";
+}
+
+@* 検索フォームを生成 *@
+<form id="myform" class="form-inline">
+    @* キーワード入力欄 *@
+    <label for="keyword" class="mr-2">キーワード：</label>
+    <input  id="keyword" name="keyword" type="text" class="form-control" />
+    @* 刊行済みチェックボックス *@
+    <label for="relaesed" class="control-check-label">刊行済み：</label>
+    <input  id="relaesed" name="relaesed" type="checkbox" value="true" class="form-check-input" />
+    @* 検索ボタン *@
+    <input id="search" type="button" value="検索 " class="btn btn-info" />
+</form>
+<hr />
+
+@* 検索結果を表示する領域（検索結果の部分ビュー埋め込む領域） *@
+<div id="result"></div>
+
+
+<script>
+    const btn = document.querySelector("#search");
+    const result = document.querySelector("#result");
+
+    btn.addEventListener("click", 
+      //function() {
+        () => {
+            // Result#AjaxSearchアクションをリクエスト
+            fetch('/Result/AjaxSearch', {
+                   method: 'POST',
+                   // フォームの内容をFormDataとしてまとめる
+                   body  : new FormData(document.querySelector("#myform"))
+                }
+            )
+            // 取得結果を<div id="result">に反映
+            .then(res  => res.text())
+            .then(data => result.innerHTML = data);
+        }
+        , false
+    );
+</script>

@@ -1,0 +1,78 @@
+@model SelfAspNetCore.Models.SelectView
+
+@{
+    ViewData["Title"] = "Edit2";
+}
+
+<h1>Edit</h1>
+
+<h4>Book</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit2">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Book.Id" />
+            @* サムネイル *@
+            <div class="form-group">
+                <label class="control-label">サムネイル</label><br />
+                @Html.DisplayFor(model => model.Book.Isbn)
+            </div>
+            @* ISBN *@
+            <div class="form-group">
+                <label asp-for="Book.Isbn" class="control-label"></label>
+                <input asp-for="Book.Isbn" class="form-control" />
+                <span asp-validation-for="Book.Isbn" class="text-danger"></span>
+            </div>
+            @* タイトル *@
+            <div class="form-group">
+                <label asp-for="Book.Title" class="control-label"></label>
+                <input asp-for="Book.Title" class="form-control" />
+                <span asp-validation-for="Book.Title" class="text-danger"></span>
+            </div>
+            @* 価格 *@
+            <div class="form-group">
+                <label asp-for="Book.Price" class="control-label"></label>
+                <input asp-for="Book.Price" class="form-control" />
+                <span asp-validation-for="Book.Price" class="text-danger"></span>
+            </div>
+            @* 出版社 *@
+            <div class="form-group">
+                <label asp-for="Book.Publisher" class="control-label"></label>
+                @* p.122 [Mod] Selectタグヘルパーに変更 *@
+                @* <input asp-for="Publisher" class="form-control" /> *@
+                @* <select asp-for="Publisher" asp-items="ViewBag.Opts" class="form-control"></select> *@
+                @* p.124 [Mod] 列挙型から選択ボックスを生成する *@
+                @* <select asp-for="Publisher" asp-items="@Html.GetEnumSelectList<Publisher>()" class="form-control"></select> *@
+                @* p.277 [Add] ビューモデルからSelectListを設定 *@
+                @* <select asp-for="Book.Publisher" asp-items="Publishers" class="form-control"></select> *@
+
+                <span asp-validation-for="Book.Publisher" class="text-danger"></span>
+            </div>
+            @* 刊行日 *@
+            <div class="form-group">
+                <label asp-for="Book.Published" class="control-label"></label>
+                <input asp-for="Book.Published" class="form-control" />
+                <span asp-validation-for="Book.Published" class="text-danger"></span>
+            </div>
+            @* 配布サンプル *@
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Book.Sample" /> @Html.DisplayNameFor(model => model.Book.Sample)
+                </label>
+            </div>
+            @* Saveボタン *@
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,339 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SelfAspNetCore
+build_property.RootNamespace = SelfAspNetCore
+build_property.ProjectDir = C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Binder/CreateMulti.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmluZGVyXENyZWF0ZU11bHRpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Binder/CreateMulti2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmluZGVyXENyZWF0ZU11bHRpMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Binder/Custom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmluZGVyXEN1c3RvbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Binder/Custom2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmluZGVyXEN1c3RvbTIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Binder/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmluZGVyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Binder/Upload.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmluZGVyXFVwbG9hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Binder/UploadDB.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmluZGVyXFVwbG9hZERCLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Books/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Books/CreateViewHelper.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQ3JlYXRlVmlld0hlbHBlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Books/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Books/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Books/Details2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGV0YWlsczIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Books/DisplayTemplates/Book.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGlzcGxheVRlbXBsYXRlc1xCb29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Books/DisplayTemplates/ImageUrl.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGlzcGxheVRlbXBsYXRlc1xJbWFnZVVybC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Books/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Books/Edit2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRWRpdDIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Books/EditorTemplates/Currency.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRWRpdG9yVGVtcGxhdGVzXEN1cnJlbmN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Books/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Common/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbW9uXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Common/List2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbW9uXExpc3QyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Common/Nest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbW9uXE5lc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Config/Basic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uZmlnXEJhc2ljLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Entity/Assoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50aXR5XEFzc29jLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Entity/Assoc2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50aXR5XEFzc29jMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Entity/Assoc3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50aXR5XEFzc29jMy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Filter/Csrf.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsdGVyXENzcmYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Filter/ResponseCache.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsdGVyXFJlc3BvbnNlQ2FjaGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Hello/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9cTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Hello/List2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9cTGlzdDIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Hello/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9cU2hvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/Basic.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxCYXNpYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/Filter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxGaWx0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/Group.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxHcm91cC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/GroupMini.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxHcm91cE1pbmkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/GroupMulti.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxHcm91cE11bHRpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/Having.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxIYXZpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/Items.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxJdGVtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/Join.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxKb2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/Select.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxTZWxlY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Linq/SortGrid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGlucVxTb3J0R3JpZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Result/AjaxForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0XEFqYXhGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Result/_AjaxResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVzdWx0XF9BamF4UmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Reviews/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Reviews/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Reviews/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Reviews/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Reviews/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Selector/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsZWN0b3JcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Shared/Components/Base.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQmFzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Shared/Components/List/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTGlzdFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Shared/Components/Meta/Base.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWV0YVxCYXNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Shared/Components/Meta/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcTWV0YVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Shared/MyError.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE15RXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Shared/_SubLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdWJMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Shared/_Time.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UaW1lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Tag/Anchor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXEFuY2hvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Tag/Cache.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXENhY2hlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Tag/Cover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXENvdmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Tag/CustomViewHelper.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXEN1c3RvbVZpZXdIZWxwZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Tag/Func.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXEZ1bmMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Tag/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Tag/MyRadio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXE15UmFkaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Tag/Path.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXFBhdGguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Tag/SelectGroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFnXFNlbGVjdEdyb3VwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Users/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Users/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Users/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Users/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/010159_numoto/AspNetCorePrac/SelfAspNetCore/SelfAspNetCore/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-wjzsj6mbdb

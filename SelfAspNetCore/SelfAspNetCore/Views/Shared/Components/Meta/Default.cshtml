@@ -1,0 +1,6 @@
+﻿@* p.202 [Add] Metaビューコンポーネント（<meta>要素を動的に生成する） *@
+@model SelfAspNetCore.Models.Book
+
+@* URIが「～/books/details/xxxxx」(xxxxxはid値)の場合、個々の書籍情報に応じた<meta>要素を生成 *@
+<meta name="keywords" content="@Model.Title, @Model.Publisher" />
+<meta name="description" content="@Model.Title（@Model.Publisher・@Model.Price 円）" />

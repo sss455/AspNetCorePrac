@@ -1,0 +1,19 @@
+@* p.279 [Add] レコードを使用し、Title／Priceプロパティだけを含んだオブジェクトを返す（GroupByメソッド） *@
+@model IEnumerable<IGrouping<string, MiniBook>>
+
+@{
+    ViewData["Title"] = "GroupMini";
+}
+
+@foreach(var group in Model)
+{
+    <dt>@group.Key</dt>
+    <dd>
+        <Ul>
+            @foreach(var b in group)
+            {
+                <li>@b.Title (@b.Price 円)</li>
+            }
+        </Ul>
+    </dd>
+}

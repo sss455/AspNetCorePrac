@@ -1,0 +1,31 @@
+﻿@* p.338 [Add] ページを部分更新するーーPartialViewResultクラス *@
+
+@* 検索結果を表示する部分ビュー *@
+@model IEnumerable<SelfAspNetCore.Models.Book>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(b => b.Isbn)</th>
+            <th>@Html.DisplayNameFor(b => b.Title)</th>
+            <th>@Html.DisplayNameFor(b => b.Price)</th>
+            <th>@Html.DisplayNameFor(b => b.Publisher)</th>
+            <th>@Html.DisplayNameFor(b => b.Published)</th>
+            <th>@Html.DisplayNameFor(b => b.Sample)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @* 検索結果をテーブル表示（既定では全件表示） *@
+        @foreach(var item in Model) 
+        {
+            <tr>
+                <td>@Html.DisplayFor(b => item.Isbn)</td>
+                <td>@Html.DisplayFor(b => item.Title)</td>
+                <td>@Html.DisplayFor(b => item.Price)</td>
+                <td>@Html.DisplayFor(b => item.Publisher)</td>
+                <td>@Html.DisplayFor(b => item.Published)</td>
+                <td>@Html.DisplayFor(b => item.Sample)</td>
+            </tr>
+        }
+    </tbody>
+</table>

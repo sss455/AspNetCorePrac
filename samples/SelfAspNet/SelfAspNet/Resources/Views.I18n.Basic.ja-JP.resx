@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="Hello" xml:space="preserve">
+        <value>今日は。</value>
+    </data>
+    <data name="Current" xml:space="preserve">
+        <value>&lt;b&gt;本日は、{0} です。&lt;/b&gt;</value>
+    </data>
+</root>

@@ -1,0 +1,39 @@
+@CoreApi_HostAddress = http://localhost:8101
+
+GET {{CoreApi_HostAddress}}/weatherforecast/
+Accept: application/json
+###
+
+POST {{CoreApi_HostAddress}}/api/books/
+Content-Type: application/json
+
+{
+  "isbn": "978-4-7981-9999-9",
+  "title": "速習 ASP.NET Core",
+  "price": 3000,
+  "publisher": "WINGS",
+  "published": "2024-02-07",
+  "sample": true
+}
+###
+
+GET  {{CoreApi_HostAddress}}/api/Books/1
+Accept: application/json
+###
+
+PUT  {{CoreApi_HostAddress}}/api/Books/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "isbn": "978-4-7981-8094-6",
+  "title": "独習Java 第6版",
+  "price": 3278,
+  "publisher": "翔泳社",
+  "published": "2024-02-15T00:00:00",
+  "sample": true
+}
+###
+
+DELETE   {{CoreApi_HostAddress}}/api/Books/1
+Accept: application/json

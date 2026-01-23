@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+
+@* p.194 [Add] 用意された「部分ビュー」をページテンプレートに埋め込む *@
+<partial name="_Time" />
+@* [補足] *@
+@*  <partial>はタグヘルパーの一種で、name属性で指定された部分ビューを取得＆反映する。 *@
+@*  ビュー名には拡張子が補われるので、「name="_Time.cshtml"」とはしない。 *@

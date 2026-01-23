@@ -1,0 +1,28 @@
+@model IEnumerable<Book>
+
+@{
+    ViewData["Title"] = "CreateMulti2";
+}
+
+<form asp-action="CreateMulti2">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <input type="submit" value="Create" class="btn btn-primary" />
+
+    <table class="table">
+        <tr>
+            <th>ISBMコード</th><th>書名</th><th>価格</th><th>出版社</th><th>刊行日</th>
+        </tr>
+        @for(var i=0; i < 5; i++)
+        {
+            <tr>
+                <td>@Html.Hidden( $"dic[{i}].Key", $"{i}")
+                    @Html.TextBox($"dic[{i}].Value.Isbn",      "", new { @class="form-control"})</td>
+                <td>@Html.TextBox($"dic[{i}].Value.Title",     "", new { @class="form-control"})</td>
+                <td>@Html.TextBox($"dic[{i}].Value.Price",     "", new { @class="form-control"})</td>
+                <td>@Html.TextBox($"dic[{i}].Value.Publisher", "", new { @class="form-control"})</td>
+                <td>@Html.TextBox($"dic[{i}].Value.Published", "", new { @class="form-control"})</td>
+            </tr>
+        }
+    </table>
+</form>

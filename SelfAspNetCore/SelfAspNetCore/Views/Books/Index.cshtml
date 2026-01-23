@@ -1,0 +1,91 @@
+@* p.72 [Auto] dotnet aspnet-codegenerator（Scaffolding機能） *@
+@model IEnumerable<SelfAspNetCore.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    @* Create Newリンク *@
+    <a asp-action="Create">Create New</a>
+</p>
+
+@* p.149 [Add] Cacheタグヘルパー *@
+<cache vary-by-query="mode">現在時刻：@DateTime.Now</cache>
+
+<table class="table">
+    <thead>
+        @* タイトル行を出力 *@
+        <tr>
+            <th>
+                サムネイル
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Isbn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Publisher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Published)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sample)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@* データ行を繰り返し出力 *@
+@foreach (var item in Model) {
+        <tr>
+            @* サムネイル *@
+            <td>
+                @* @Html.DisplayFor(modelItem => item.Isbn) *@
+
+                @* DisplayForメソッドから自作テンプレートに対して追加情報を渡すこともできる *@
+                @Html.DisplayFor(modelItem => item.Isbn, new { width = 80, height = 30 })
+            </td>
+            @* ISBN *@
+            <td>
+                @item.Isbn
+            </td>
+            @* タイトル *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            @* 価格 *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            @* 出版社 *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Publisher)
+            </td>
+            @* 刊行日 *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Published)
+            </td>
+            @* 配布サンプル *@
+            <td>
+                @Html.DisplayFor(modelItem => item.Sample)
+            </td>
+            @* アクションリンク列 *@
+            <td>
+                <a asp-action="Edit"     asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details"  asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Details2" asp-route-id="@item.Id">Details2</a> |
+                <a asp-action="Delete"   asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

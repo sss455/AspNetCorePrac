@@ -1,0 +1,6 @@
+@CoreSpa.Server_HostAddress = http://localhost:5095
+
+GET {{CoreSpa.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

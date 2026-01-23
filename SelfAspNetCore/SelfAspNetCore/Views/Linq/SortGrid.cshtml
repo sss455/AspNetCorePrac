@@ -1,0 +1,59 @@
+@* p.272 [Add] ソート可能なグリッド表を作成する（LINQメソッド構文） *@
+@* @model IEnumerable<SelfAspNetCore.Models.Book> *@
+@model IEnumerable<Book>
+
+@* @{
+    ViewData["Title"] = "SortGrid";
+} *@
+
+<table class="table">
+    @* ヘッダー：ソートリンクを生成 *@
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="SortGrid" asp-route-sort="@ViewBag.Isbn">
+                    @Html.DisplayNameFor(b => b.Isbn)
+                </a>
+            </th>
+            <th>
+                <a asp-action="SortGrid" asp-route-sort="@ViewBag.Title">
+                    @Html.DisplayNameFor(b => b.Title)
+                    <br/>
+                </a>
+            </th>
+            <th>
+                <a asp-action="SortGrid" asp-route-sort="@ViewBag.Price">
+                    @Html.DisplayNameFor(b => b.Price)
+                </a>
+            </th>
+            <th>
+                <a asp-action="SortGrid" asp-route-sort="@ViewBag.Publisher">
+                    @Html.DisplayNameFor(b => b.Publisher)
+                </a>
+            </th>
+            <th>
+                <a asp-action="SortGrid" asp-route-sort="@ViewBag.Published">
+                    @Html.DisplayNameFor(b => b.Published)
+                </a>
+            </th>
+            <th>
+                <a asp-action="SortGrid" asp-route-sort="@ViewBag.Sample">
+                    @Html.DisplayNameFor(b => b.Sample)
+                </a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(b => item.Isbn)</td>
+                <td>@Html.DisplayFor(b => item.Title)</td>
+                <td>@Html.DisplayFor(b => item.Price)</td>
+                <td>@Html.DisplayFor(b => item.Publisher)</td>
+                <td>@Html.DisplayFor(b => item.Published)</td>
+                <td>@Html.DisplayFor(b => item.Sample)</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,40 @@
+﻿@* p.424 [Auto]「ASP.NET Core Identity」プロジェクトの内容             *@
+@* ヘッダー領域に[Login]リンクを生成するための部分ビュー「_LoginPartial」 *@
+@using Microsoft.AspNetCore.Identity
+
+@* ユーザーの情報を管理するのは、Identity標準で用意されたSignInManager／UserManagerサービスの役割 *@
+@* ※ビュー上でサービスを利用する際には、あらかじめ「@injectディレクティブ」で有効にしておく。      *@
+@inject SignInManager<IdentityUser> SignInManager
+@inject   UserManager<IdentityUser> UserManager
+
+<ul class="navbar-nav">
+    @* SignInManager＃IsSignedInメソッドで現在のユーザーがログイン済みであるかを確認 *@
+    @if (SignInManager.IsSignedIn(User))
+    {
+        @* ログイン済みの場合は「現在のユーザー名」と「[Logout]リンク」を表示 *@
+        <li class="nav-item">
+            <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
+                @* User.Identity.Nameプロパティでユーザー名を表示                     *@
+                @* ※現在のユーザーを表すUserは、RazorPageクラスのプロパティ(p.184参照) *@
+                Hello @User.Identity?.Name!
+            </a>
+        </li>
+        <li class="nav-item">
+            <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        @* 未ログインの場合は「[Register] [Login]リンク」を表示                                                    *@
+        @* ※以下のリンクが示す「/Account/Register」「/Account/Login」に相当するファイルは、プロジェクトには存在しない *@
+        @*   (Identity標準の見た目を利用する場合には、ライブラリを直接参照しているため)                               *@
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
+</ul>

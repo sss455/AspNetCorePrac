@@ -1,0 +1,21 @@
+@inject IConfiguration Config
+
+@{
+    ViewData["Title"] = "Basic";
+}
+
+@* p.473 [Add] 構成ファイルの値を取得する *@
+<h2>構成ファイルの値を取得</h2>
+<ul>
+    <li>@Config["MyAppOptions:Title"]</li>
+    <li>@ViewBag.Published1</li>
+    <li>@ViewBag.Projects1</li>
+</ul>
+
+@* p.474 [Add] 型厳密な構成情報の取得 *@
+<h2>型厳密な構成情報の取得</h2>
+<ul>
+    <li>@(Config.GetValue<string>("MyAppOptions:Title"))</li>
+    <li>@ViewBag.Published2</li>
+    <li>@ViewBag.Projects2</li>
+</ul>

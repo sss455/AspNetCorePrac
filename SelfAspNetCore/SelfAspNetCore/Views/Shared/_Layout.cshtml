@@ -1,0 +1,107 @@
+﻿@* ############ p.49 _Layout.cshtmlのことを「レイアウト」と呼ぶ。############ *@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SelfAspNetCore</title>
+
+    @* p.201 [Add] Metaビューコンポーネント（<meta>要素を動的に生成する） *@
+    <vc:meta context="Context" />
+    @* p.146 [Mod] Linkタグヘルパー *@
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" 
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+          asp-fallback-test-class="visually-hidden"
+          asp-fallback-test-property="overflow"
+          asp-fallback-test-value="hidden" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @* p.189 Scoped CSSのインポート（特定のテンプレートにのみ適用されるスタイルを定義） *@
+    @* ※Scoped CSSはビルド時に処理されて、「<プロジェクト名>.styles.css」のようなファイルが仮想的に生成される *@
+    <link rel="stylesheet" href="~/SelfAspNetCore.styles.css" asp-append-version="true" />
+</head>
+<body>
+    @*---------------------------------------------------------------------------------------------------------------*@
+    @* ヘッダー領域 *@
+    @*---------------------------------------------------------------------------------------------------------------*@
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SelfAspNetCore</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    @*---------------------------------------------------------------------------------------------------------------*@
+    @* メイン領域 *@
+    @*---------------------------------------------------------------------------------------------------------------*@
+    <div class="container">
+        <main role="main" class="pb-3">
+            @* p.48 @RenderBodyメソッドで個別のテンプレートを読み込む *@
+            @RenderBody()
+        </main>
+    </div>
+
+    @*---------------------------------------------------------------------------------------------------------------*@
+    @* フッター領域 *@
+    @*---------------------------------------------------------------------------------------------------------------*@
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - SelfAspNetCore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    @*---------------------------------------------------------------------------------------------------------------*@
+    @* JavaScriptライブラリのインポート *@
+    @*---------------------------------------------------------------------------------------------------------------*@
+    @* p.147 [Mod] Environmentタグヘルパー *@
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script> *@
+    @*<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    <environment include="Development">
+        <!-- 開発環境での出力 -->
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <!-- 開発環境以外での出力 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.bootstrap">
+        </script>
+    </environment>
+    
+    @* p.145 [Mod] asp-append-versionを常に付与する *@
+    @*<script src="~/js/site.js" asp-append-version="true"></script>*@
+    <script asp-src-include="~/js/site.js"></script>
+
+    @* p.185 レイアウトに複数の領域を用意する ーーー セクション *@
+    @*   個々のテンプレートからScriptsセクションを引き渡せるようになる。 *@
+    @*   ※引数requiredにfalseを指定しているのは、ページ固有のスクリプトが常に存在するとは限らないため。 *@
+    @await RenderSectionAsync("Scripts", required: false)
+    @*----------------------------------------------------------------------*@
+    @*【構文】 *@
+    @*   public HtmlString? RenderSection(string name [, bool required]) *@
+    @*       name    : セクションの名前 *@
+    @*       required: セクションが必須か *@
+    @*----------------------------------------------------------------------*@
+</body>
+</html>

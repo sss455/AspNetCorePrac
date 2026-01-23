@@ -1,0 +1,17 @@
+@* p.279 [Add] レコードを使用し、複数列をキーにグループ化する（GroupByメソッド） *@
+@model IEnumerable<IGrouping<BookGroup, Book>>
+
+@{
+    ViewData["Title"] = "GroupMulti";
+}
+
+@foreach(var group in Model)
+{
+    <dt>@group.Key.Publisher（@group.Key.Year）</dt>
+    <dd>
+        @foreach(var b in group)
+        {
+            <li>@b.Title（@b.Price 円）</li>
+        }
+    </dd>
+}

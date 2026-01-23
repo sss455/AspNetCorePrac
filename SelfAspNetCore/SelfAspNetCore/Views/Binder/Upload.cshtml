@@ -1,0 +1,16 @@
+@* p.377 [Add] ファイルをアップロードする(1) ーーファイルシステムへの保存 *@
+@{
+    ViewData["Title"] = "Upload";
+}
+
+@* <form>要素に「enctype="multipart/form-data"」属性を指定。enctype属性はフォームデータのエンコード形式を指定するもの。 *@
+<form enctype="multipart/form-data" asp-action="Upload">
+    @* エラーメッセージ（ModelOnly） *@
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    @* ファイル入力ボックス（multiple属性） ※name属性はアクション側の引数名と合わせる*@
+    <input type="file" name="upFiles" multiple />
+    @* アップロードボタン *@
+    <button type="submit" class="btn btn-primary">アップロード</button>
+    @* 成功メッセージ *@
+    <p class="text-success">@ViewBag.Message</p>
+</form>

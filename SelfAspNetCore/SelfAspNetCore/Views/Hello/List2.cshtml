@@ -1,0 +1,57 @@
+﻿@* p.200 [Add] ビューコンポーネントの呼び出し *@
+@model IEnumerable<SelfAspNetCore.Models.Book>
+
+@{
+    ViewData["Title"] = "List2";
+}
+
+@* タグヘルパーを利用し、ListViewComponentの呼び出し *@
+<vc:list price="3000" />
+@*【補足】*@
+@*   属性は、Invoke／InvokeAsyncメソッドに渡すパラメーター。同名の引数に対応する。 *@
+@*   ただし、引数がcamelCase形式の場合はケバブケース形式に置き換える必要がある。 *@
+@*   例えば、highPriceであれば、属性名はhigh-priceとなる。 *@
+
+
+@* ビューヘルパーを利用し、ListViewComponentの呼び出し *@
+@await Component.InvokeAsync("List", new { price = 3000 })
+@*【補足】*@
+@*  [構文] *@
+@*    public Task<IHtmlContent> InvokeAsync(string name, object arguments) *@
+@*       ・name     ：ビューコンポーネントの名前 *@
+@*       ・arguments：ビューコンポーネントに渡す引数 *@
+@* ※この場合は、タグヘルパー有効化の手順は不要。 *@
+
+
+
+
+
+@* 以下をListViewComponent.csとしてビューコンポーネント化 *@
+@* <table class="table">
+    <!-- テーブルヘッダー -->
+    <thead>
+        <tr>
+            <th>ISBNコード</th>
+            <th>書名</th>
+            <th>価格</th>
+            <th>出版社</th>
+            <th>刊行日</th>
+            <th>配布サンプル</th>
+        </tr>
+    </thead>
+    <!-- テーブルボディ -->
+    <tbody>
+        <!-- リストの内容を繰り返し表示 -->
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Isbn</td>
+                <td>@item.Title</td>
+                <td>@item.Price</td>
+                <td>@item.Publisher</td>
+                <td>@item.Published.ToString("D")</td>
+                <td>@item.Sample</td>
+            </tr>
+        }
+    </tbody>
+</table> *@

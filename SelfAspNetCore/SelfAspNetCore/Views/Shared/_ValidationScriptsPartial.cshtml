@@ -1,0 +1,57 @@
+﻿@* p.308 [Add] 標準的な検証機能の実装 *@
+@* 検証機能に関わるjQueryのライブラリをインポート *@
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+@* jquery.validate.min.js            ：jQueryに検証機能を付与するためのプラグイン *@
+@* jquery.validate.unobtrusive.min.js：検証機能のパラメーターを独自データ属性(data-xxxxx属性)で管理するためのライブラリ *@
+
+
+@* p.329 [mod] 検証属性の自作（クライアントサイドの実装） *@
+@* クライアントサイド検証を動作させるには、検証属性クラスで設定した独自データ属性(data-xxxxx)を取得し、検証処理を実装するためのJavaScriptコードが必要。 *@
+@* これには、jQueryの検証ライブラリをインポートしている部分ビュー(_ValidationScriptsPartial.cshtml)に追記が必要。 *@
+<script>
+@* $.validator.addMethodメソッド：検証ルールを定義する。 *@
+$.validator.addMethod('inoptions',  @* 第1引数：検証名（InOptions検証）*@
+    @* 第2引数：検証コールバック関数 *@
+    (value, element, params) => {
+    //function(value, element, params) {
+    @*------------------------------------------------
+    //【検証コールバック関数の引数】
+    //  value  ：入力値
+    //  element：検証対象の要素
+    //  params ：検証パラメーター(ここでは候補値リスト) 
+    //          ※data-val-inoptions-opts属性の値
+    //------------------------------------------------*@
+
+        // 入力値をトリム
+        value = $.trim(value);
+
+        // 入力値が空の場合は検証をスキップ
+        if(value === '') { return true; }
+
+        // カンマ区切りの候補値リストを分解し、入力値valueと比較
+        // some：1つでも条件に合致するものがあればtrueを返す
+        if( params.split(',').some(p => p.trim() == value) ) {
+            // 検証成功
+            return true;
+        }
+
+        // 合致するものが1つもない場合、検証失敗
+        return false;
+    }
+);
+
+@* $.validator.unobtrusive.adapters.addSingleValメソッド：<input>要素でdata-inoptions属性があった場合に、InOptions検証が呼び出されるという紐づけを行う。 *@
+// InOptions検証と、パラメーターoptsを登録
+$.validator.unobtrusive.adapters.addSingleVal('inoptions', 'opts')
+@* 上記の場合、「パラメータoptsを持つInOptions検証を登録せよ」という意味 *@
+@* これによって、検証コールバック関数の引数paramにoptsパラメーター(data-val-inoptions-opts属性)の値が渡される *@
+
+@*【補足】
+//  jQuery Validationとdata-xxxxx属性とを紐づけるには、パラメーターの個数に応じて、addSingleValの他にも 
+//  addBool、addMinMax、addなどのメソッドなどがあります。
+//  たとえばaddBoolメソッドは、「addBool('url')」のように名前だけで検証を登録するような用途で利用する。
+//  ほとんどの状況では、addBool／addSingleValメソッドで登録できるはずです。
+*@
+
+</script>

@@ -1,0 +1,106 @@
+@model SelfAspNetCore.Models.Book
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Book</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @* ポスト先のアクションを指定 *@
+        <form asp-action="Create">
+
+            @* p.312 モデル全体に関わるエラーをリスト表示 *@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*-----------------------------------------------------------------------------------------------------*@
+            @* ページで発生したエラー情報をリスト表示するのが asp-validation-summary属性の役割 *@
+            @* 属性値はエラーを表示する対象を表す。 *@
+            @*【asp-validation-summary属性の設定値】 *@
+            @*  ・All      ：すべてのエラー(モデル＋プロパティレベルのエラー) *@
+            @*  ・ModelOnly：モデルレベルのエラー *@
+            @*  ・None     ：表示しない *@
+            @* ※ここではModelOnlyを指定しているので、競合エラーのように特定のプロパティに紐づかないエラーだけを表示する。  *@
+            @*   Allとすることで、個々のプロパティにに属するエラーを表示することもできますが、 *@
+            @*   asp-validation-for属性による表示と重複するため、まずはModelOnlyとしておくのが一般的。 *@
+            @*-----------------------------------------------------------------------------------------------------*@
+
+            @* モデルに基づいて、ラベル／入力要素を生成 *@
+            @* ISBN *@
+            <div class="form-group">
+                <label asp-for="Isbn" class="control-label"></label>
+                <input asp-for="Isbn" class="form-control" />
+
+                @* p.312 個々の項目(ISBN)に対するエラーを反映 *@
+                <span asp-validation-for="Isbn" class="text-danger"></span>
+                @*-------------------------------------------------------------------------------------------------*@
+                @* プロパティ(項目)個々のエラーメッセージを表示するのはasp-validation-for属性(タグヘルパー)の役割 *@
+                @* 内部的には以下のようなマークアップが生成される。 *@
+                @*   <span class="text-danger field-validation-valid" *@
+                @*         data-valmsg-for="Isbn" datavalmsg-replace="true"></span> *@
+                @* data-valmsg-xxxxx属性で対象となるプロパティ、検証に関わるオプションなどが紐づいていることが確認できる *@
+                @*-------------------------------------------------------------------------------------------------*@
+            </div>
+            @* タイトル *@
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                @* 個々の項目(タイトル)に対するエラーを反映 *@
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            @* 価格 *@
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                @* p.2622 [Mod] 自作テンプレートを適用したEditorForメソッドに変更 *@
+                @* <input asp-for="Price" class="form-control" /> *@
+                @Html.EditorFor(m => m.Price)
+
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            @* 出版社 *@
+            <div class="form-group">
+                <label asp-for="Publisher" class="control-label"></label>
+                <input asp-for="Publisher" class="form-control" />
+                <span asp-validation-for="Publisher" class="text-danger"></span>
+            </div>
+            @* 刊行日 *@
+            <div class="form-group">
+                <label asp-for="Published" class="control-label"></label>
+
+                @* p.312 日付による範囲検証の問題点 *@
+                @* 日付による範囲検証を用いる場合、「data-val="false"」属性を付与し、クライアントサイド検証を無効化する *@
+                @* ※jQuery Validationが日付範囲を正しく認識せず、常にエラーを吐き出してしまうため。 *@
+                <input asp-for="Published" class="form-control" data-val="false" />
+
+                <span asp-validation-for="Published" class="text-danger"></span>
+            </div>
+            @* 配布サンプル *@
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Sample" /> @Html.DisplayNameFor(model => model.Sample)
+                </label>
+            </div>
+            @* Createボタン *@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@* p.186 @sectionブロックで、セクション領域にコンテンツを引き渡す *@
+@*   @sectionブロック：レイアウト側で用意されたセクションに対して、コンテンツを引き渡す *@
+@*   以下で、Scriptsセクションに{...}配下のコンテンツを埋め込みなさい、という意味。 *@
+@*    ・埋め込み元：Views/Shared/_ValidationScriptsPartial.cshtml *@
+@*    ・埋め込み先：Views/Shared/_Layout.cshtmlのScriptsセクション *@
+@*   ※@section配下にテンプレートを直接記述してもかまわない。 *@
+@section Scripts {
+    @* RenderPartialAsyncメソッド：部分ビューを読み込み *@
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

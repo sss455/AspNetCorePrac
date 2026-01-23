@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Scope";
+}
+
+<h2>サービスのスコープ（有効期間）</h2>
+
+<pre>
+■AddSingleton
+@ViewBag.SingletonSvc1 / @ViewBag.SingletonSvc2
+
+■AddScoped
+@ViewBag.ScopedSvc1 / @ViewBag.ScopedSvc2
+
+■AddTransient
+@ViewBag.TransientSvc1 / @ViewBag.TransientSvc2
+
+
+<input type="hidden" name="singletonSvc1" value="@ViewBag.SingletonSvc1" />
+<input type="hidden" name="singletonSvc2" value="@ViewBag.SingletonSvc2" />
+
+<input type="hidden" name="scopedSvc1" value="@ViewBag.ScopedSvc1" />
+<input type="hidden" name="scopedSvc2" value="@ViewBag.ScopedSvc2" />
+
+<input type="hidden" name="transientSvc1" value="@ViewBag.TransientSvc1" />
+<input type="hidden" name="transientSvc2" value="@ViewBag.TransientSvc2" />
+
+</pre>

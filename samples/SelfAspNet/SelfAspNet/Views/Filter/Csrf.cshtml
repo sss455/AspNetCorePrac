@@ -1,0 +1,19 @@
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+
+@{
+  var requestToken = Antiforgery.GetAndStoreTokens(Context).RequestToken;
+}
+
+<button id="btn">送信</button>
+<input id="token" type="hidden" value="@requestToken" />
+
+<script>
+document.getElementById('btn').addEventListener('click', async () => {
+  await fetch('@Url.Action("Process")', {
+    method: 'POST',
+    headers: {
+      RequestVerificationToken: document.getElementById('token').value
+    }
+  });
+});
+</script>

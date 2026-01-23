@@ -1,0 +1,14 @@
+@model IEnumerable<IGrouping<BookGroup, Book>>
+
+@foreach(var group in Model)
+{
+  <dt>@group.Key.Publisher（@group.Key.Year 年）</dt>
+    <dd>
+        <ul>
+            @foreach (var b in group)
+            {
+                <li>@b.Title（@b.Price 円）</li>
+            }
+        </ul>
+    </dd>
+}

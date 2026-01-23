@@ -1,0 +1,33 @@
+@* p.220 [Add] ナビゲーションプロパティへのアクセス（遅延読み込み） *@
+@model SelfAspNetCore.Models.Book
+
+@{
+    ViewData["Title"] = "Assoc3";
+}
+
+@*----------------------------------*@
+@* Books : Reviews : Authors : User *@
+@*   1   :    n                     *@
+@*   m        :         n           *@
+@*                      1    :   1  *@
+@*----------------------------------*@
+
+<h3>@Model.Title</h3>
+<ul>
+    <li>著者：
+        
+        @foreach(var author in Model.Authors)
+        {
+            @: @author.PenName（ @author.User.Name ) /
+        }
+    </li>
+    <li>価格：@Model.Price 円</li>
+    <li>出版社：@Model.Publisher</li>
+</ul>
+<hr />
+<ol>
+    @foreach(var review in Model.Reviews)
+    {
+        <li>（@review.Name）@review.Body</li>
+    }
+</ol>

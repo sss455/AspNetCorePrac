@@ -1,0 +1,22 @@
+﻿@* http://localhost:8080/tag/anchor *@
+@{
+    ViewData["Title"] = "Anchor";
+
+    // ルートに引き渡すパラメーター群を準備
+    // ※asp-all-route-dataは複数のパラメーターを辞書形式でまとめて渡すための属性
+    var param = new Dictionary<string, string>
+    {
+        { "id", "3" },
+        { "mode", "dark" },
+    };
+}
+
+<a asp-protcol="https" asp-controller="Books" asp-action="Details" asp-all-route-data="param" asp-fragment="details">詳細</a>
+
+@* asp-route-{param}を使用した例。↑と同じ意味 *@
+@*
+<a asp-protcol="https" asp-controller="Books" asp-action="Details" asp-route-id="3" asp-route-mode="dark" asp-fragment="details">詳細</a>
+*@
+
+@* ↑で生成されるhref属性 *@
+@* href="http://localhost:8080/Books/Details/3?mode=dark#details" *@

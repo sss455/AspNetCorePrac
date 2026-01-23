@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <data name="Common" xml:space="preserve">
+        <value>共通メッセージです。</value>
+    </data>
+    <data name="Book_Isbn" xml:space="preserve">
+        <value>ISBNコード</value>
+    </data>
+    <data name="Book_Title" xml:space="preserve">
+        <value>書名</value>
+    </data>
+    <data name="Book_Price" xml:space="preserve">
+        <value>価格</value>
+    </data>
+    <data name="Book_Publisher" xml:space="preserve">
+        <value>出版社</value>
+    </data>
+    <data name="Book_Published" xml:space="preserve">
+        <value>刊行日</value>
+    </data>
+    <data name="Book_Sample" xml:space="preserve">
+        <value>配布サンプル</value>
+    </data>
+    <data name="RequiredError" xml:space="preserve">
+        <value>{0}は必須入力です。</value>
+    </data>
+    <data name="RangeError" xml:space="preserve">
+        <value>{0}は{1}～{2}の間で指定してください。</value>
+    </data>
+</root>

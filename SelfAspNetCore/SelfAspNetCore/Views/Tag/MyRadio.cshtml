@@ -1,0 +1,11 @@
+@model SelfAspNetCore.Models.Book
+
+@{
+    ViewData["Title"] = "MyRadio";
+}
+
+@Html.RadioButtonListFor(
+    model => model.Publisher,                  // Book.出版社
+    (IEnumerable<SelectListItem>) ViewBag.Pubs,     // { Value, Text }
+    new { @class = "form-check form-check-inline" } // Labelに付与するHTML属性
+)

@@ -1,0 +1,1467 @@
+【独習C＃ 第5版】
+第1章 イントロダクション
+　1.1 ASP.NET Coreの全体像
+　　1.1.1 .NET環境
+　　1.1.2 ASP.NET Coreの全体像
+　　1.1.3 ASP.NET Coreの学習指針
+　1.2 ASP.NET Core利用のための環境設定
+　　1.2.1 ASP.NET Coreプログラミングに必要なソフトウェア
+　　1.2.2 .NET SDKのインストール
+　　1.2.3 Visual Studio Codeのインストール
+　　1.2.4 SQL Serverのインストール
+　この章の理解度チェック
+
+第2章 ASP.NET Core MVCの基本
+　2.1 ソリューション／プロジェクトの作成
+　2.2 コントローラーの基本
+　　2.2.1 コントローラークラスの作成
+　　2.2.2 ルーティングの基本
+　2.3 ビューの基本
+　　2.3.1 Razorテンプレートの基本
+　　2.3.2 レイアウトの基本
+　2.4 モデルの基本
+　　2.4.1 Entity Framework Coreとは？
+　　2.4.2 EF Core利用のための準備
+　　2.4.3 データモデルの生成
+　　2.4.4 データベースの作成
+　　2.4.5 データアクセスの基本
+　　2.4.6 [補足]デバッグの基本
+　この章の理解度チェック
+
+第3章 Scaffolding機能
+　3.1 Scaffolding機能の実行
+　3.2 一覧画面の実装
+　　3.2.1 Indexアクション
+　　3.2.2 Index.cshtmlテンプレート
+　3.3 詳細画面の実装
+　　3.3.1 Detailsアクション
+　　3.3.2 Details.cshtmlテンプレート
+　3.4 新規登録画面の実装
+　　3.4.1 Createアクション／Create.cshtmlテンプレート（フォームの生成）
+　　3.4.2 Createアクション（入力値の登録）
+　3.5 編集画面の実装
+　　3.5.1 Editアクション
+　　3.5.2 Edit.cshtmlテンプレート
+　3.6 削除画面の実装
+　　3.6.1 Delete／DeleteConfirmedアクション
+　この章の理解度チェック
+
+第4章 ビュー開発
+　4.1 Razorの基本文法
+　　4.1.1 Razor式（@...）
+　　4.1.2 @...式による属性値の生成
+　　4.1.3 予約文字「@」の扱い
+　　4.1.4 コードブロック
+　　4.1.5 ディレクティブ
+　　4.1.6 サーバーコメント
+　4.2 タグヘルパー／ビューヘルパー
+　　4.2.1 選択ボックスを生成する                 ―Selectタグヘルパー
+　　4.2.2 データ型に応じて出力を切り替える       ―DisplayForビューヘルパー
+　　4.2.3 データ型に応じて入力要素を切り替える   ―Inputタグヘルパー
+　　4.2.4 ハイパーリンクを生成する               ―Anchorタグヘルパー
+　　4.2.5 HTMLエンコードを無効化する             ―Rawビューヘルパー
+　　4.2.6 Cache Busting対応の画像を生成する      ―Imageタグヘルパー
+　　4.2.7 JavaScriptライブラリをインポートする   ―Scriptタグヘルパー
+　　4.2.8 スタイルシートをインポートする         ―Linkタグヘルパー
+　　4.2.9 環境に応じて出力を分岐する             ―Environmentタグヘルパー
+　　4.2.10 ページの特定の領域だけをキャッシュする―Cacheタグヘルパー
+　4.3 ビューヘルパー／タグヘルパーの自作
+　　4.3.1 シンプルなビューヘルパー
+　　4.3.2 拡張メソッドによるヘルパー定義
+　　4.3.3 HTML文字列を生成するビューヘルパー
+　　4.3.4 [例]ラジオボタンリストの生成
+　　4.3.5 [補足]@functionsディレクティブ
+　　4.3.6 タグヘルパーの基本
+　　4.3.7 [例]モデルから画像付きリンクを生成する
+　　4.3.8 [補足]タグヘルパーの小さなテクニック
+　　4.3.9 タグヘルパーコンポーネントの基本
+　4.4 レイアウト
+　　4.4.1 レイアウトを適用するさまざまな方法
+　　4.4.2 レイアウトに複数の領域を用意する―セクション
+　　4.4.3 レイアウトを入れ子に配置する
+　　4.4.4 特定のテンプレートにのみ適用されるスタイルを定義する―Scoped CSS
+　4.5 部分ビュー／ビューコンポーネント
+　　4.5.1 部分ビューの基本
+　　4.5.2 ビューコンポーネントの基本
+　　4.5.3 [例]要素を動的に生成する
+　　4.5.4 テンプレート化されたRazorデリゲート
+　この章の理解度チェック
+
+第5章 モデル開発
+　5.1 エンティティの定義
+　　5.1.1 ナビゲーションプロパティの定義
+　　5.1.2 ナビゲーションプロパティへのアクセス
+　　5.1.3 Null許容参照型とエンティティ
+　　5.1.4 アノテーションによる規約のカスタマイズ
+　　5.1.5 Fluent APIによる規約のカスタマイズ
+　5.2 マイグレーション
+　　5.2.1 マイグレーションの仕組み
+　　5.2.2 マイグレーションファイルの構造
+　　5.2.3 [補足]マイグレーションで利用できる主なメソッド
+　　5.2.4 dotnet efコマンドのさまざまな用法
+　5.3 LINQ to Entities
+　　5.3.1 クエリ構文とメソッド構文
+　　5.3.2 データの検索条件を指定する    ―Whereメソッド
+　　5.3.3 データを並べ替える            ―OrderByメソッド
+　　5.3.4 特定のプロパティだけを取得する―Selectメソッド
+　　5.3.5 特定範囲のデータを取り出す    ―Skip／Takeメソッド
+　　5.3.6 データをグループ化する        ―GroupByメソッド
+　　5.3.7 グループ化した結果を絞り込む  ―GroupBy＋Whereメソッド
+　　5.3.8 エンティティ同士を結合する    ―Joinメソッド
+　5.4 データの登録／更新／削除
+　　5.4.1 複数のレコードをまとめて登録する
+　　5.4.2 複数のレコードをまとめて更新／削除する
+　　5.4.3 エンティティの関係を追加／更新する
+　　5.4.4 トランザクション処理を実装する
+　　5.4.5 同時実行制御を実装する
+　　5.4.6 エンティティを操作した前後の処理を実装する―インタセプター
+　5.5 入力値の検証
+　　5.5.1 検証の基本
+　　5.5.2 その他の検証属性
+　　5.5.3 検証属性の自作―サーバーサイドの実装
+　　5.5.4 検証属性の自作―クライアントサイドの実装
+　この章の理解度チェック
+
+第6章 コントローラー開発
+　6.1 IActionResultオブジェクト
+　　6.1.1 テンプレートで出力を生成する     ―ViewResultクラス
+　　6.1.2 ページを部分更新する             ―PartialViewResultクラス
+　　6.1.3 ページをリダイレクトする         ―RedirectResultクラス
+　　6.1.4 ステータスコードだけを出力する   ―HttpStatusCodeResultクラス
+　　6.1.5 テキストのコンテンツを出力する   ―ContentResultクラス
+　　6.1.6 指定されたファイルを出力する     ―VirtualFileResultクラス
+　　6.1.7 バイナリ形式のデータを応答する   ―FileXxxxxResultクラス（1）
+　　6.1.8 iText7で動的にPDFデータを作成する―FileXxxxxResultクラス（2）
+　　6.1.9 IActionResult実装クラスの自作
+　6.2 モデルバインド
+　　6.2.1 モデルバインドの仕組み
+　　6.2.2 リスト／辞書へのバインド
+　　6.2.3 ファイルをアップロードする（1）―ファイルシステムへの保存
+　　6.2.4 ファイルをアップロードする（2）―データベースへの保存
+　　6.2.5 値プロバイダー
+　　6.2.6 モデルバインダーの自作
+　6.3 フィルター
+　　6.3.1 フィルターの分類
+　　6.3.2 フィルターの基本
+　　6.3.3 フィルターの非同期化
+　　6.3.4 フィルターの実行順序
+　　6.3.5 依存性注入を伴うフィルター
+　6.4 標準のフィルター属性
+　　6.4.1 クロスサイトリクエストフォージェリ脆弱性を対策する―ValidateAntiForgeryToken属性
+　　6.4.2 応答キャッシュを有効にする―ResponseCache属性
+　　6.4.3 アクションに認証機能を付与する―Authorize属性
+　6.5 セレクター属性
+　　6.5.1 HTTPメソッドに応じてリクエストを振り分ける―HttpXxxxx属性
+　　6.5.2 アクションメソッドを無効化する―NonAction属性
+　　6.5.3 セレクター属性の自作
+　この章の理解度チェック
+
+第7章 ASP.NET Coreアプリの構造
+　7.1 サービスと依存性注入
+　　7.1.1 標準サービスの注入
+　　7.1.2 自作サービスの登録
+　　7.1.3 サービスのスコープ（有効期間）
+　　7.1.4 AddSingleton／AddScoped／AddTransientメソッドのオーバーロード
+　　7.1.5 [補足]特殊なサービス登録メソッド
+　7.2 ミドルウェアとパイプライン
+　　7.2.1 ミドルウェアの順序
+　　7.2.2 ミドルウェアの作成（Use／Runメソッド）
+　　7.2.3 ミドルウェアの自作（Mapメソッド）
+　　7.2.4 ミドルウェアクラスの作成
+　7.3 アプリの構成
+　　7.3.1 構成情報の取得
+　　7.3.2 構成値を自作のクラスにマッピングする―Optionsパターン
+　　7.3.3 構成プロバイダー
+　　7.3.4 シークレット情報の管理
+　7.4 ロギング
+　　7.4.1 ログの基本
+　　7.4.2 ログの出力レベルを変更する
+　　7.4.3 LogXxxxxメソッドのさまざまな記法
+　　7.4.4 ログプロバイダーを追加／削除する
+　　7.4.5 ログプロバイダーの自作
+　この章の理解度チェック
+
+第8章 ミドルウェア
+　8.1 ルーティング
+　　8.1.1 URLパターン
+　　8.1.2 ルートパラメーターの制約
+　　8.1.3 制約条件の自作
+　　8.1.4 属性ルーティング
+　　8.1.5 エリア
+　8.2 状態管理
+　　8.2.1 クッキーを読み書きする
+　　8.2.2 セッションを利用する
+　　8.2.3 一時データを保存する
+　　8.2.4 [補足]HttpContext.Items変数
+　8.3 エラーページ
+　　8.3.1 エラーページの基本
+　　8.3.2 エラーステータスに応じてページを表示する
+　8.4 静的リソース
+　　8.4.1 StaticFileMiddlewareミドルウェアのオプション
+　　8.4.2 フォルダー参照、既定のファイルを有効にする
+　8.5 国際化対応
+　　8.5.1 国際化対応の基本
+　　8.5.2 国際化対応ページの挙動
+　　8.5.3 リソースファイルのさまざまな定義方法
+　この章の理解度チェック
+
+第9章 ASP.NET Coreの主なサブフレームワーク
+　9.1 Razor Pages
+　　9.1.1 Razor Pagesアプリの作成
+　　9.1.2 プロジェクト既定のファイルを確認する
+　　9.1.3 Razor PagesでのScaffolding
+　　9.1.4 Scaffoldingされたアプリの確認
+　　9.1.5 Razor Pagesのフィルター
+　9.2 ASP.NET Core Web API
+　　9.2.1 ASP.NET Core Web APIの基本
+　　9.2.2 プロジェクト既定のファイルを確認する
+　　9.2.3 Web APIでのScaffolding
+　　9.2.4 Scaffoldされたアプリの確認
+　　9.2.5 応答フォーマットの制御
+　　9.2.6 フォーマッターのカスタマイズ
+　　9.2.7 ドキュメントページのカスタマイズ
+　　9.2.8 Minimal API
+　9.3 SPAプロジェクト
+　　9.3.1 SPAプロジェクトの作成
+　　9.3.2 オリジン間リソース共有（CORS）
+　この章の理解度チェック
+
+付録A 本番環境への移行
+　A.1 Microsoft Azureとは？
+　A.2 Azureデプロイの準備
+　A.3 アプリのデプロイ
+　A.4 Azure SQL Databaseの利用
+　Column ASP.NET CoreアプリからSQLiteを利用するには？
+　Column 単体テストの自動化
+　Column 本家サイトを活用する
+
+付録B 「練習問題」「この章の理解度チェック」解答
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------
+ 第1章 イントロダクション
+-----------------------------------------------------------------------------------------
+　1.1 ASP.NET Coreの全体像
+　　1.1.1 .NET環境
+　　1.1.2 ASP.NET Coreの全体像
+　　1.1.3 ASP.NET Coreの学習指針
+
+　1.2 ASP.NET Core利用のための環境設定
+　　1.2.1 ASP.NET Coreプログラミングに必要なソフトウェア
+　　1.2.2 .NET SDKのインストール
+　　1.2.3 Visual Studio Codeのインストール
+　　1.2.4 SQL Serverのインストール
+
+
+
+
+
+-----------------------------------------------------------------------------------------
+ 第章2 ASP.NET Core MVCの基本
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------
+ 2.1 ソリューション／プロジェクトの作成
+------------------------------------------------------------
+①ソリューションの作成先に移動   (※)C:\data にソリューションを作成する前提
+cd C:\data
+dotnet new sln -o SelfAspNetCore
+
+②「SelfAspNetCore」プロジェクトを作成
+cd ./SelfAspNetCore
+dotnet new mvc -o SelfAspNetCore -f net8.0
+
+③「SelfAspNetCore」プロジェクトをソリューションに追加
+dotnet sln add SelfAspNetCore
+
+
+
+■dotnet newコマンドの構文
+「dotnet new name options」
+    name   ：テンプレートの名前（p.28参照）
+    options：生成オプション（p.28参照）
+
+
+■dotnet newコマンドで利用できるテンプレートの一覧を出力
+「dotnet new list」
+
+
+■登録済みのプロジェクトを解除
+「dotnet sln remove SelfAspNetCore」
+
+
+■アプリを監視モードで起動（プロジェクトルート）
+「dotnet watch」
+
+
+■「https://～」アクセスを有効にし、開発用証明書を受け入れるための設定
+「dotnet dev-certs https --trust」
+・起動時
+「dotnet watch --launch-profile https」
+
+
+■アドレスを明示して起動
+「dotnet watch --urls="http://localhost:7777"」
+
+
+
+------------------------------------------------------------
+ 2.2 コントローラーの基本
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+ 2.3 ビューの基本
+------------------------------------------------------------
+
+
+------------------------------------------------------------
+ 2.4 モデルの基本
+------------------------------------------------------------
+■Entitiy Framework Core（EF Core）を利用するために、関連するツール、および、パッケージ（ライブラリ）を現在のプロジェクトにインストール
+-- ツールをインストール
+dotnet tool install --global dotnet-ef
+→dotnet tool install --global dotnet-ef --version 8.0.4
+
+dotnet tool install --global dotnet-aspnet-codegenerator
+→dotnet tool install --global dotnet-aspnet-codegenerator　--version 9.0.0
+
+-- パッケージをインストール
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+→dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 8.0.0
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+→dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.0
+
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+→dotnet add package Microsoft.EntityFrameworkCore.Tools --version 8.0.0
+
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+→dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 8.0.0
+
+
+※ dotnet tool install... ツールをインストールするためのコマンド
+※ dotnet add package.... パッケージをインストールするためのコマンド
+※ --globalオプション.... 現在の環境でグローバルに（＝プロジェクトをまたいで）利用できるようにインストール。
+                          --globalオプション指定されない場合は、現在のプロジェクトに限定したローカルインストールになる。
+
+======================================================================================================================================
+PS C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore> dotnet tool install --global dotnet-ef --version 8.0.4
+ツール 'dotnet-ef' がバージョン '3.1.0' からバージョン '8.0.4' に正常に更新されました。
+
+PS C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore> dotnet tool install --global dotnet-aspnet-codegenerator
+次のコマンドを使用してツールを呼び出せます。dotnet-aspnet-codegenerator
+ツール 'dotnet-aspnet-codegenerator' (バージョン '9.0.0') が正常にインストールされました。
+======================================================================================================================================
+
+
+PS C:\Users\010159_numoto\AspNetCorePrac\samples\SelfAspNet\SelfAspNet> dotnet list package
+プロジェクト 'SelfAspNet' に次のパッケージ参照が含まれています
+   [net8.0]: 
+   最上位レベル パッケージ                                            要求済み    解決済み
+   > itext.font-asian                                      8.0.3   8.0.3
+   > itext7                                                8.0.3   8.0.3
+   > itext7.bouncy-castle-adapter                          8.0.3   8.0.3
+   > Microsoft.EntityFrameworkCore.Design                  8.0     8.0.0
+   > Microsoft.EntityFrameworkCore.Proxies                 8.0.1   8.0.1
+   > Microsoft.EntityFrameworkCore.SqlServer               8.0     8.0.0
+   > Microsoft.EntityFrameworkCore.Tools                   8.0     8.0.0
+   > Microsoft.Extensions.Caching.SqlServer                8.0.2   8.0.2
+   > Microsoft.VisualStudio.Web.CodeGeneration.Design      8.0     8.0.0
+
+
+
+■EF Coreのおおまかな開発手順
+① データモデル（エンティティ）の定義
+② DB接続文字列、DBコンテキストの定義
+③ マイグレーションの実行
+④ コントローラー／テンプレートの作成
+⑤ サンプルの実行
+
+
+
+
+■マイグレーションを追加（Migrationsフォルダーも自動生成される）
+dotnet ef migrations add Initial
+
+・データベースに反映
+dotnet ef database update
+
+
+======================================================================================================================================
+PS C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore> dotnet ef database update
+Build started...
+Build succeeded.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (187ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      CREATE DATABASE [SelfAspNetCore];
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (56ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+      IF SERVERPROPERTY('EngineEdition') <> 5
+      BEGIN
+          ALTER DATABASE [SelfAspNetCore] SET READ_COMMITTED_SNAPSHOT ON;
+      END;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [__EFMigrationsHistory] (
+          [MigrationId] nvarchar(150) NOT NULL,
+          [ProductVersion] nvarchar(32) NOT NULL,
+          CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT 1
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [MigrationId], [ProductVersion]
+      FROM [__EFMigrationsHistory]
+      ORDER BY [MigrationId];
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20251209055843_Initial'.
+Applying migration '20251209055843_Initial'.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE [Books] (
+          [Id] int NOT NULL IDENTITY,
+          [Isbn] nvarchar(max) NOT NULL,
+          [Title] nvarchar(max) NOT NULL,
+          [Price] int NOT NULL,
+          [Publisher] nvarchar(max) NOT NULL,
+          [Published] datetime2 NOT NULL,
+          [Sample] bit NOT NULL,
+          CONSTRAINT [PK_Books] PRIMARY KEY ([Id])
+      );
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+      VALUES (N'20251209055843_Initial', N'8.0.0');
+Done.
+======================================================================================================================================
+
+
+
+
+-----------------------------------------------------------------------------------------
+ 第3章 Scaffolding機能
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------
+ 3.1 Scaffolding機能の実行
+------------------------------------------------------------
+■Scaffolding機能を利用
+dotnet aspnet-codegenerator controller -name BooksController -outDir Controllers -async -m Book -dc MyContext -udl -scripts
+
+
+======================================================================================================================================
+PS C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore> dotnet aspnet-codegenerator controller -name BooksController -outDir Controllers -async -m Book -dc MyContext -udl -scripts
+Building project ...
+Finding the generator 'controller'...
+Running the generator 'controller'...
+
+Minimal hosting scenario!
+Attempting to compile the application in memory.
+Attempting to figure out the EntityFramework metadata for the model and DbContext: 'Book'
+
+Using database provider 'Microsoft.EntityFrameworkCore.SqlServer'!
+
+Added Controller : '\Controllers\BooksController.cs'... CRUD機能を備えたコントローラー
+Added View : \Views\Books\Create.cshtml................ 一覧画面を生成するテンプレート
+Added View : \Views\Books\Edit.cshtml.................. 詳細画面を生成するテンプレート
+Added View : \Views\Books\Details.cshtml............... 登録画面を生成するテンプレート
+Added View : \Views\Books\Delete.cshtml................ 削除画面を生成するテンプレート
+Added View : \Views\Books\Index.cshtml................. 編集画面を生成するテンプレート
+RunTime 00:00:06.12
+======================================================================================================================================
+
+※ASP.NET Core MVCアプリでCRUDを伴うコントローラーを作成するならば、controllerサブコマンドを利用する。
+
+cf p.73 「dotnet aspnet-codegeneratorコマンドで利用できる主なオプション」
+
+
+
+
+------------------------------------------------------------
+ 3.2 一覧画面の実装
+------------------------------------------------------------
+
+■Controllers/BooksConroller.cs
+
+    // p.72 [Auto] dotnet aspnet-codegenerator（Scaffolding機能）で自動生成
+    public class BooksController : Controller
+    {
+        private readonly MyContext _context;
+
+        // コンストラクター
+        public BooksController(MyContext context)
+        {
+            // コンテキストの注入
+            _context = context;
+        }
+
+        // 一覧画面表示：Indexアクションを非同期化し、データベースにアクセス
+        public async Task<IActionResult> Index()
+        {
+            // データベースから取得した結果をテンプレートに送信
+            return View(await _context.Books.ToListAsync());
+        }
+        ...中略...
+    }
+
+■Views/Books/Index.cshtml
+
+    @model IEnumerable<SelfAspNetCore.Models.Book>
+    ...中略...
+
+        <!-- タイトル行を出力 -->
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Isbn)
+            </th>
+        ...中略...
+
+        <!-- データ行を繰り返し出力 -->
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Isbn)
+                </td>
+
+            ...中略...
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+        ...中略...
+
+
+・生成されるHTMLの例
+  <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+    ↓
+  <a href="/books/edit/13">Edit</a>
+
+  ※asp-action属性     ：リンク先のアクション
+  ※asp-route-xxx属性  ：xxxパラメータに渡す値（例えば、dateパラメータに値を渡すならば asp-route-date属性で表す
+  ※asp-contoroller属性：異なるコントローラーにリンクする場合に使用
+
+■note
+・タグヘルパー  ：タグ、または asp-xxxのような属性形式で表せる命令のこと。
+・ビューヘルパー：@Html.xxx形式で呼び出せるメソッドのこと。
+
+
+
+■Models/Books.cs
+
+    using System.ComponentModel.DataAnnotations;
+    ...中略...
+
+    public class Book
+    {
+        public int Id { get; set; }
+
+        [Display(Name = "ISBN")]
+        public String Isbn { get; set; } = String.Empty;
+
+        [Display(Name = "タイトル")]
+        public String Title { get; set; } = String.Empty;
+
+        ...中略...
+    }
+
+
+------------------------------------------------------------
+ 3.3 詳細画面の実装
+------------------------------------------------------------
+
+■Controllers/BooksConroller.cs
+
+    public class BooksController : Controller
+    {
+        ...中略...
+
+        // 詳細画面表示：リクエストデータidを受け取る
+        //   既定のルート「{controller}/{action}/{id}」では、任意の{id}パラメーターが用意されている。
+        //               「/books/details/108」        のような呼び出しでは、引数idには"108"がセットされる。
+        //               「/books/details?id=108」     としても、同じ結果が得られる。
+        //   このようなパラメータ割り当ての仕組みのことを「モデルバインド」と言う。
+        public async Task<IActionResult> Details(int? id)
+        {
+            // idが無指定、書籍情報が得られない場合、404エラー
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            // 引数idをキーにBooksテーブルを検索
+            var book = await _context.Books.FirstOrDefaultAsync(m => m.Id == id);
+
+            // データが見つからなかった場合は404エラー
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            return View(book);
+        }
+        ...中略...
+    }
+
+・FirstOrDefaultAsyncメソッド：特定のキーでデータベースを検索し、最初に一致した1件だけを返す（複数レコードが合致した場合にも、最初の1件だけを返す）。条件式に合致するデータが無かった場合にはnullを返す。
+ ===========================
+  [構文] public Task<TSource?> FirstOrDefaultAsync<TSource> ( Expression<Func<Tsource, bool>> predicate )
+            TSource  : 要素の型
+            predicate: 要素を取得するための条件式
+ ===========================
+
+・FindAsyncメソッド：主キーでテーブルを検索し、単一のエンティティを取得する。主キーでの検索に特化しているので、よりシンプルに表現できる。
+                     (例) var book = await _context.Books.FindAsync(id);
+
+・NotFoundメソッド ：「404 Not Found」（ページが見つからない）エラーでのIActionResult型を生成する。
+
+
+■Views/Books/Details.cshtml
+
+    @model SelfAspNet.Models.Book  // ←※
+    ...中略...
+
+        <dl class="row">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Isbn)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Isbn)
+            </dd>
+            ...中略...
+
+  ※Viewメソッドから単一のエンティティが渡されているので、@modelディレクティブでもIEnumerable<Book>ではなく、単にBookをしている点に注目。
+
+
+------------------------------------------------------------
+ 3.4 新規登録画面の実装
+------------------------------------------------------------
+
+■Controllers/BooksConroller.cs
+
+        // 新規登録画面表示
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+  ※登録フォームを表示するためのCreateアクションについてはViewメソッドでテンプレートを呼び出しているだけなので、特筆すべき点はなし。
+    このように実行すべき処理が無い場合、アクションメソッドにはIActionResult派生オブジェクトを返すためのコード（ここではViewメソッド）だけを記述する。
+
+■Views/Books/Create.cshtml
+
+    @model SelfAspNetCore.Models.Book
+    ...中略...
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- ポスト先のアクションを指定 -->
+            <form asp-action="Create"> ←①
+                <!-- モデルに基づいて、ラベル／入力要素を生成 -->
+                <div class="form-group">
+                    <label asp-for="Isbn" class="control-label"></label> ←②
+                    <input asp-for="Isbn" class="form-control" />        ←②
+                </div>
+                ...中略...
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                </div>
+                ...中略...
+                <div class="form-group">
+                    <label asp-for="Published" class="control-label"></label>
+                    <input asp-for="Published" class="form-control" />
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Sample" /> @Html.DisplayNameFor(model => model.Sample)
+                    </label>
+                </div>
+
+
+①<form>要素の「asp-action属性」：指定されたアクションをポスト先（action属性）とするフォームを生成できる。
+ 
+ 【生成されるHTMLの例】
+   <form asp-action="Create">
+     ↓
+   <form action="/Books/Create" method="post" novalidate="novalidate">
+
+   ※action属性だけでなく、method属性も自動で付与されている点に注目。
+   ※別のコントローラーをポスト先にしたい場合には、asp-controller属性を指定することも可能。
+
+
+②<label>／<input>要素の「asp-for属性」：紐づけるべきモデルのプロパティ名を指定。
+
+  ・<label asp-for="Isbn" class="control-label"></label>
+    →プロパティの表示名が反映されるので、配下のテキストは不要。
+
+  ・<input asp-for="Isbn" class="form-control" />
+    →プロパティの型に応じて、type属性など、適切な属性が付与される。
+
+
+ 【生成されるHTMLの例】※見やすくするため、class属性は削除。
+ --------------------------------------------------------------
+   <label asp-for="Isbn"></label>
+   <input asp-for="Isbn" />
+      ↓
+   <label for="Isbn">Isbn</label>
+   <input type="text" id="Isbn" name="Isbn" value="" />
+
+ --------------------------------------------------------------
+   <label asp-for="Price"></label>
+   <input asp-for="Price" />
+      ↓
+   <label for="Price">Price</label>
+   <input type="number" id="Price" name="Price" value="" />
+
+ --------------------------------------------------------------
+   <label asp-for="Published"></label>
+   <input asp-for="Published" />
+      ↓
+   <label for="Published">Published</label>
+   <input type="datetime-local" id="Published" name="Published" value="" />
+
+ --------------------------------------------------------------
+   <label>
+       <input asp-for="Sample" /> @Html.DisplayNameFor(model => model.Sample)
+   </label>
+      ↓
+   <label>
+       <input type="checbox" id="Sample" name="Sample" value="true" /> Sample
+   </label>
+   ...中略...
+   <input name="Sample" type="hidden" value="false">
+
+ --------------------------------------------------------------
+  ※データ型に応じてtype属性が決まる点に注目。
+   ・Isbnプロパティは      string型なので、  テキストボックス    (type="text")
+   ・Priceプロパティは     int型なので、     数値入力ボックス    (type="number")
+   ・Pulishedプロパティは  DateTime型なので、日付時刻入力ボックス(type="datetime-local")
+   ・Sampleプロパティは    boole型なので、   チェックボックス    (type="checkbox")
+
+
+■[補足]ビューヘルパーによるフォーム生成
+・Views/Books/Create.cshtml
+
+        <!-- p.92 [Mod] タグヘルパーの代わりに、ビューヘルパーで書き換えた例 -->
+        @using(Html.BeginForm()) {
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- モデルに基づいて、ラベル／入力要素を生成 -->
+            <div class="form-group">
+                @Html.LabelFor(b => b.Isbn, new { @class = "control-label" })
+                @Html.TextBoxFor(b => b.Isbn, new { @class = "form-control" })
+                <span asp-validation-for="Isbn" class="text-danger"></span>
+            </div>
+        }
+
+
+
+■Controllers/BooksConroller.cs
+
+    public class BooksController : Controller
+    {
+        ...中略...
+
+        // [翻訳]
+        // オーバーポスティング攻撃(過多ポスティング攻撃)から保護するため、バインドしたい特定のプロパティを有効にしてください。
+        // 詳細については、http://go.microsoft.com/fwlink/?LinkId=317598 をご覧ください。
+        //
+        // 新規登録画面：HTTP POSTに割り当てられたアクション(Createボタン押下時)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        // ポストデータを引数にバインド
+        public async Task<IActionResult> Create(
+            // オーバーポスティング攻撃対策のため、引数Bookエンティティ(モデルオブジェクト)にバインドしてよいプロパティを明示的に列挙
+            [Bind("Id, Isbn, Title, Price, Publisher, Published, Sample")] Book book)
+        {
+            if (ModelState.IsValid)
+            {
+                //-------------------------------------
+                // エンティティをデータベースに反映
+                //-------------------------------------
+                // Addメソッドでエンティティをコンテキストに追加（メモリ上の登録操作。まだデータベースは変更されない）
+                // 複数のデータをまとめて登録したいならば、Addメソッドを複数回呼び出す
+                _context.Add(book);
+
+                // SaveChangesAsyncメソッドでデータベースへ反映（実操作）
+                await _context.SaveChangesAsync();
+
+                // 処理に成功したら、一覧画面にリダイレクト
+                return RedirectToAction( nameof(Index) );
+            }
+            // 入力に問題がある場合は登録フォームを再描画
+            return View(book);
+        }
+        ...中略...
+    }
+
+
+  ・Bind属性................... モデルバインドへのオーバーポスティング攻撃対策のため、引数Bookエンティティ(モデルオブジェクト)にバインドしてよいプロパティを明示的に列挙する
+
+  ・Addメソッド................ エンティティをコンテキストに追加（メモリ上の登録操作。まだデータベースは変更されない）
+                                複数のデータをまとめて登録したいならば、Addメソッドを複数回呼び出す
+  ・SaveChangesAsyncメソッド... データベースへ反映（実操作）
+
+  ・RedirectToActionメソッド... 別のアクションを呼び出す（＝ページを移動する）。View／Contentなどと同じく、IResultAction派生オブジェクトを生成するためのヘルパーメソッド。
+
+  ・nameof演算子............... RedirectToAction("Index")としても同じ意味ですが、nameof演算子を解することで、「Index」が文字列ではなく、識別子（メソッド名）として認識される。
+                                タイプミスした場合にもコンパイルエラーが通知してくれるため、識別子は極力、nameof演算子経由で表すのがよい。
+
+
+------------------------------------------------------------
+ 3.5 編集画面の実装
+------------------------------------------------------------
+
+■Controllers/BooksConroller.cs
+
+    public class BooksController : Controller
+    {
+        ...中略...
+
+        // GET: Books/Edit/5
+        // 編集画面表示：[Edit]リンクから呼び出され、編集フォームを生成
+        public async Task<IActionResult> Edit(int? id)
+        {
+            // 引数id、または書籍情報が空の場合、404 Not Foundエラー
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            // 引数idをキーにテーブルを検索
+            var book = await _context.Books.FindAsync(id);
+
+            // 対応する書籍情報が存在しなければ、404 Not Foundエラー
+            if (book == null)
+            {
+                return NotFound();
+            }
+            // 編集フォームを表示
+            return View(book);
+        }
+
+        // POST: Books/Edit/5
+        // [翻訳]
+        // オーバーポスティング攻撃(過多ポスティング攻撃)から保護するため、バインドしたい特定のプロパティを有効にしてください。
+        // 詳細については、http://go.microsoft.com/fwlink/?LinkId=317598 をご覧ください。
+        //
+        // 編集画面：[Save]ボタンで編集内容をデータベースに反映
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Isbn,Title,Price,Publisher,Published,Sample")] Book book)
+        {
+            // 隠しフィールドのid値と、ルートパラメータのidとが一致するか
+            if (id != book.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    //-----------------------------------------
+                    // エンティティの更新ををデータベースに反映
+                    //-----------------------------------------
+                    // Updateメソッドで、このエンティティが更新されたことをコンテキストに通知（メモリ上の更新操作。まだデータベースは変更されない）
+                    _context.Update(book);
+                    //_context.Entry(book).State = EntityState.Modified; // Stateプロパティを利用。↑と同じ意味
+
+                    // SaveChangesAsyncメソッドでデータベースへ反映（実操作）
+                    await _context.SaveChangesAsync();
+                }
+                // 競合が発生した場合の処理
+                catch (DbUpdateConcurrencyException)
+                {
+                    // 該当の書籍が存在しなければ、404 Not Fountエラー
+                    // ※他のユーザーが先に削除してしまった場合
+                    if (!BookExists(book.Id))
+                    {
+                        return NotFound();
+                    }
+                    // 書籍が存在する場合は競合エラー（例外を再スロー）
+                    // ※他のユーザーが同じデータを更新してしまった場合
+                    else
+                    {
+                        throw;
+                    }
+                }
+                // データベース更新に成功した場合はリダイレクト
+                return RedirectToAction(nameof(Index));
+            }
+            // 入力に問題がある場合は編集フォームを再描画
+            return View(book);
+        }
+        ...中略...
+
+        // 指定された書籍が存在するかを判定
+        private bool BookExists(int id)
+        {
+            return _context.Books.Any(e => e.Id == id);
+        }
+    }
+
+
+■Views/Books/Edit.cshtml
+
+        ...中略...
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" /> ←★
+            ...中略...
+        </form>
+        ...中略...
+
+  ※あとからルートパラメーターと比較するために、隠しフィールドとしてIdプロパティの値を埋め込んでおく。
+    Editアクションで、ルートパラメーターidと隠しフィールドIdを比較し、値が異なる場合は 404 Not Found エラーを返す。
+
+
+
+------------------------------------------------------------
+ 3.6 削除画面の実装
+------------------------------------------------------------
+
+■Controllers/BooksConroller.cs
+
+    public class BooksController : Controller
+    {
+        ...中略...
+
+        // GET: Books/Delete/5
+        // [Delete]リンクによって呼び出され、削除画面を生成
+        public async Task<IActionResult> Delete(int? id)
+        {
+            // 引数idが空の場合は404 Not Foundエラー
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            // 引数idをキーに書籍情報を取得
+            var book = await _context.Books.FirstOrDefaultAsync(m => m.Id == id);
+
+            // 合致する書籍が存在しなければ404 Not Foundエラー
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            // 削除画面を表示
+            return View(book);
+        }
+
+        // POST: Books/Delete/5
+        // [Delete]ボタンで削除処理を実行
+        //   ※引数が一致する同名メソッドは定義できないため、アクションメソッド名をDeleteConfirmedとし、
+        //     ActionName属性でアクション名をDeleteとすることで、1つのDeleteアクションとしてまとめている。
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            // 引数idをキーに書籍情報を取得
+            var book = await _context.Books.FindAsync(id);
+
+            // 合致する書籍が存在したら削除（存在しなければ何もしない）
+            if (book != null)
+            {
+                // Removeメソッドで、このエンティティが削除されたことをコンテキストに通知（メモリ上の更新操作。まだデータベースは変更されない）
+                _context.Books.Remove(book);
+            }
+
+            // SaveChangesAsyncメソッドでデータベースへ反映（実操作）
+            await _context.SaveChangesAsync();
+
+            // 削除後は一覧にリダイレクト
+            return RedirectToAction(nameof(Index));
+        }
+        ...中略...
+
+    }
+
+
+
+-----------------------------------------------------------------------------------------
+ 第4章 ビュー開発
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------
+ 4.1 Razorの基本文法
+------------------------------------------------------------
+
+
+
+
+------------------------------------------------------------
+ 4.2 タグヘルパー／ビューヘルパー
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+■選択オプションをグループ化＜Selectタグヘルパー＞
+・Controllers/TagController.cs
+
+    public class TagController : Controller
+    {
+        ...中略...
+
+        public async Task<IActionResult> SelectGroup()
+        {
+            // 記事情報の取得
+            var articles = _context.Articles.Select(a => new
+            {
+               Url      = a.Url,      // 記事URL
+               Title    = a.Title,    // 記事タイトル
+               Category = a.Category, // カテゴリ
+            });
+
+            // 選択オプションを作成（グループ化）
+            //ViewBag.Opts = new SelectList(articles, "Url", "Title", null, "Category");
+            ViewBag.Opts = new SelectList(
+                                    items         : articles,    // リストの各SelectListItemを構築するために使用される項目
+                                    dataValueField: "Url",       // <option>要素のvalue属性の設定値
+                                    dataTextField : "Title",     // <option>要素のテキストフィールドの設定値
+                                    selectedValue : null,        // <option>要素の初期選択値
+                                    dataGroupField: "Category"); // <optgroup>要素の設定値（選択肢をグループ化するフィールド）
+
+            return View(await _context.Articles.FindAsync(1));
+        }
+        ...中略...
+    }
+
+・Views/Tag/SelectGroup.cshtml
+
+    @model SelfAspNetCore.Models.Article
+    
+    ...中略...
+    
+    <select asp-for="Url" asp-items="ViewBag.Opts" class="form-control"></select>
+
+
+
+
+------------------------------------------------------------
+ 4.3 ビューヘルパー／タグヘルパーの自作
+------------------------------------------------------------
+
+
+
+
+------------------------------------------------------------
+ 4.4 レイアウト
+------------------------------------------------------------
+
+
+
+
+------------------------------------------------------------
+ 4.5 部分ビュー／ビューコンポーネント
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------
+ 第5章 モデル開発
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------
+ 5.1 エンティティの定義
+------------------------------------------------------------
+■p.219 遅延読み込み用のライブラリをインストール
+「dotnet add package Microsoft.EntityFrameworkCore.Proxies」
+→ 「dotnet add package Microsoft.EntityFrameworkCore.Proxies --version 8.0.1」
+
+※遅延読み込みでは、ナビゲーションプロパティに対して関連データを取得するためのプロキシを内部的に準備する。
+  そのためのライブラリをあらかじめインストールしておく（Microsoft.EntityFrameworkCore.Proxiesパッケージ）
+
+
+------------------------------------------------------------
+ 5.2 マイグレーション
+------------------------------------------------------------
+
+
+
+
+
+
+■p.253 dotnet efコマンドの主なサブコマンド
+|==============================================================================================================================
+| 分類        | サブコマンド                        | 概要                                                                     |
+|==============================================================================================================================
+| 更新        | database update                     | 最後、もしくは指定のマイグレーションに更新                               |
+|             | database drop                       | データベースを削除                                                       |
+|------------------------------------------------------------------------------------------------------------------------------
+| 移行        | migrations remove                   | 最後のマイグレーションを削除＆ロールバック                               |
+|             | migrations list                     | 利用可能なマイグレーションの一覧を表示                                   |
+|             | migrations bundle                   | データベースを更新するための実行ファイルを生成                           |
+|             | migrations has-pending-model-chages | 前回のマイグレーションからモデルに変更が加えられたかを確認（.NET 8以降） |
+|------------------------------------------------------------------------------------------------------------------------------
+|コンテキスト | dbcontext info                      | コンテキストの情報を表示                                                 |
+|             | dbcontext list                      | 利用可能なコンテキストの一覧を表示                                       |
+|             | dbcontext optimize                  | モデルのコンパイル済みバージョンを生成                                   |
+|             | dbcontext scaffold                  | データベースからコンテキスト＋エンティティを生成                         |
+|             | dbcontext script                    | コンテキストから.sqlファイルを生成                                       |
+|==============================================================================================================================
+
+
+■p.253 dotnet efコマンドの共通オプション
+|==========================================================================================================
+| オプション                     | 別名 | 概要                                                             |
+|==========================================================================================================
+| --context        ＜CONTEXT＞   | -c   | 使用するデータベースコンテキスト（単純名、または完全修飾名）     |
+|----------------------------------------------------------------------------------------------------------
+| --project        ＜PROJECT＞   | -p   | 対象となるプロジェクトへの相対パス（既定は現在のフォルダー）     |
+|----------------------------------------------------------------------------------------------------------
+| --startup-project＜PROJECT＞   | -s   | スタートアッププロジェクトへの相対パス（既定は現在のフォルダー） |
+|----------------------------------------------------------------------------------------------------------
+| --framewaork     ＜FRAMEWORK＞ | ―   | 使用するフレームワーク                                           |
+|----------------------------------------------------------------------------------------------------------
+| --configuration  ＜CONFIG＞    | ―   | ビルド構成（Debug、Releaseなど）                                 |
+|----------------------------------------------------------------------------------------------------------
+| --no-build                     | ―   | プロジェクトをビルドしない（ビルドが最新の場合などに利用）       |
+|----------------------------------------------------------------------------------------------------------
+| --json                         | ―   | JSON形式で出力するか                                             |
+|----------------------------------------------------------------------------------------------------------
+| --verbose                      | -v   | 詳細出力を表示                                                   |
+|----------------------------------------------------------------------------------------------------------
+| --no-color                     | ―   | カラーリングを出力しない                                         |
+|----------------------------------------------------------------------------------------------------------
+| --prefix-output                | ―   | ログレベルを伴う出力                                             |
+|==========================================================================================================
+
+
+■p.256 dbcontext scaffoldサブコマンドのオプション
+※※※ 一旦、省略 ※※※
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+ 5.3 LINQ to Entities
+------------------------------------------------------------
+
+
+
+
+------------------------------------------------------------
+ 5.4 データの登録／更新／削除
+------------------------------------------------------------
+
+
+
+
+------------------------------------------------------------
+ 5.5 入力値の検証
+------------------------------------------------------------
+
+■Userエンティティを利用してScaffolding機能でページを自動生成
+dotnet aspnet-codegenerator controller -name UsersController -outDir Controllers -async -m User -dc MyContext -udl -scripts
+
+
+■Reviewエンティティを利用してScaffolding機能でページを自動生成
+dotnet aspnet-codegenerator controller -name ReviewsController -outDir Controllers -async -m Review -dc MyContext -udl -scripts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------
+ 第6章 コントローラー開発
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------
+ 6.1 IActionResultオブジェクト
+------------------------------------------------------------
+
+■iText7（PDFを生成するためのライブラリ）の関連パッケージをインストール
+dotnet add package itext7 -v 8.0.2
+dotnet add package itext7.bouncy-castle-adapter -v 8.0.2
+dotnet add package itext.font-asian -v 8.0.2
+
+
+
+
+------------------------------------------------------------
+ 6.2 モデルバインド
+------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------
+ 6.3 フィルター
+------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------
+ 6.4 標準のフィルター属性
+------------------------------------------------------------
+
+
+
+
+
+-----------------------------------------------
+ 6.4.3 アクションに認証機能を付与する―Authorize属性
+-----------------------------------------------
+■ASP.NET Core Identityの準備
+①CoreIdentityプロジェクトの作成
+dotnet new mvc -o CoreIdentity --auth Individual -uld
+
+※--auth Individual：個別のアカウントを利用した認証を有効にする
+※              ult：アカウント管理にLocalDBを利用する
+※アカウント管理のためのデータベース定義（マイグレーション）はプロジェクト作成時に自動生成される
+
+②プロジェクトをソリューションに追加
+dotnet sln add CoreIdentity
+
+③データベースを作成
+cd CoreIdentity
+dotnet ef database update
+
+
+■ASP.NET Core Identityで作成されるテーブル
+  +--------------------------------------------------------------+
+  | AspNetUsers      | ユーザー情報                              |
+  -------------------+-------------------------------------------
+  | AspNetUserRoles  | ユーザーとロールの関連                    |
+  | AspNetRoles      | ユーザーのロール                          |
+  | AspNetRoleCalims | ロールの属性や権限                        |
+  -------------------+-------------------------------------------
+  | AspNetUserLogins | 外部ログインプロバイダーとユーザーの関連  |
+  | AspNetUserClaims | ユーザーの属性や権限                      |
+  | AspNetUserTokens | ユーザーのアクセストークン                |
+  +------------------+-------------------------------------------+
+
+
+■Identityで用意されたページをカスタマイズする「dotnet aspnet-codegenerator identity」コマンドを利用する。
+dotnet aspnet-codegenerator identity -dc CoreIdentity.Data.ApplicationDbContext --files "Account.Login;Account.Logout;"
+※--filesオプションにはScaffoldするファイルをセミコロン区切りで列挙
+
+・指定可能なファイルは同コマンドの「--listFiles」オプションで確認できる。
+dotnet aspnet-codegenerator identity --listFiles
+
+
+PS C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\CoreIdentity> dotnet aspnet-codegenerator identity --listFiles
+File List:
+Account._StatusMessage
+Account.AccessDenied
+Account.ConfirmEmail
+Account.ConfirmEmailChange
+Account.ExternalLogin
+Account.ForgotPassword
+Account.ForgotPasswordConfirmation
+Account.Lockout
+Account.Login
+Account.LoginWith2fa
+Account.LoginWithRecoveryCode
+Account.Logout
+Account.Manage._Layout
+Account.Manage._ManageNav
+Account.Manage._StatusMessage
+Account.Manage.ChangePassword
+Account.Manage.DeletePersonalData
+Account.Manage.Disable2fa
+Account.Manage.DownloadPersonalData
+Account.Manage.Email
+Account.Manage.EnableAuthenticator
+Account.Manage.ExternalLogins
+Account.Manage.GenerateRecoveryCodes
+Account.Manage.Index
+Account.Manage.PersonalData
+Account.Manage.ResetAuthenticator
+Account.Manage.SetPassword
+Account.Manage.ShowRecoveryCodes
+Account.Manage.TwoFactorAuthentication
+Account.Register
+Account.RegisterConfirmation
+Account.ResendEmailConfirmation
+Account.ResetPassword
+Account.ResetPasswordConfirmation
+
+
+------------------------------------------------------------
+ 6.5 セレクター属性
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------
+ 第7章 ASP.NET Coreアプリの構造
+-----------------------------------------------------------------------------------------
+------------------------------------------------------------
+ 7.1 サービスと依存性注入
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+ 7.2 ミドルウェアとパイプライン
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+ 7.3 アプリの構成
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------
+ 7.4 ロギング
+------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

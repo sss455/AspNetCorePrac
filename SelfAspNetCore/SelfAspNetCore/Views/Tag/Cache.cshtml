@@ -1,0 +1,5 @@
+@{
+    ViewData["Title"] = "Cache";
+}
+
+<cache vary-by="@(ViewBag.Num1 + ViewBag.Num2)">現在時刻：@DateTime.Now</cache>

@@ -1,0 +1,31 @@
+@* p.418 [Add] 応答キャッシュを有効にするーーResponseCache属性 *@
+@* p.420 [Add] 応答キャッシュを有効にするーーResponseCache属性の主なプロパティ(VaryByXxxxx属性) *@
+@* p.421 [Add] 応答キャッシュを有効にするーーResponseCache属性の主なプロパティ(CacheProfileName属性) *@
+@{
+    ViewData["Title"] = "ResponseCache";
+}
+
+<h2>応答キャッシュを有効にするーーResponseCache属性</h2>
+<strong>[ResponseCache(Duration = 60)]</strong> ←←←←←←←←←←←←←←←←←←←←←←※ルートパラメーターまででページを識別<br />
+<a asp-action="ResponseCache" asp-route-id="1">/books/detail/1</a> ／
+<a asp-action="ResponseCache" asp-route-id="1" asp-route-mode="dark">/books/detail/1?mode=dark</a>／
+<a asp-action="ResponseCache" asp-route-id="1" asp-route-mode="dark">/books/detail/1?mode=white</a><br />
+<a asp-action="ResponseCache" asp-route-id="2">/books/detail/2</a> ／
+<a asp-action="ResponseCache" asp-route-id="2" asp-route-mode="dark">/books/detail/2?mode=dark</a>／
+<a asp-action="ResponseCache" asp-route-id="2" asp-route-mode="dark">/books/detail/2?mode=white</a><br />
+<br />
+<strong>[ResponseCache(Duration = 60, VaryByQueryKeys = new[] { "mode" })]</strong> ←←←←←※modeというクエリ情報も含めてページを識別<br />
+<a asp-action="ResponseCacheQuery" asp-route-id="1">/books/detail/1</a> ／
+<a asp-action="ResponseCacheQuery" asp-route-id="1" asp-route-mode="dark">/books/detail/1?mode=dark</a>／
+<a asp-action="ResponseCacheQuery" asp-route-id="1" asp-route-mode="white">/books/detail/1?mode=white</a><br />
+<a asp-action="ResponseCacheQuery" asp-route-id="2">/books/detail/2</a> ／
+<a asp-action="ResponseCacheQuery" asp-route-id="2" asp-route-mode="dark">/books/detail/2?mode=dark</a>／
+<a asp-action="ResponseCacheQuery" asp-route-id="2" asp-route-mode="white">/books/detail/2?mode=white</a><br />
+<br />
+
+@DateTime.Now.ToString()<br />
+<ul>
+    <li>action= @ViewBag.Action</li>
+    <li>id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= @ViewBag.Id</li>
+    <li>mode=   @ViewBag.Mode</li>
+</ul>

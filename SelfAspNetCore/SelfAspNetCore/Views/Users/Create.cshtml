@@ -1,0 +1,64 @@
+@model SelfAspNetCore.Models.User
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @* 氏名 *@
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            @* メールアドレス *@
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            @* p.315 [Mod] Compare検証のためにScaffoldしたコードを修正 *@
+            @* ※NotMapped属性が付与されたプロパティは、Scaffolding機能でも自動生成の対象外のため。 *@
+            @* メールアドレス(確認) *@
+            <div class="form-group">
+                <label asp-for="EmailConfirmed" class="control-label"></label>
+                <input asp-for="EmailConfirmed" class="form-control" />
+                <span asp-validation-for="EmailConfirmed" class="text-danger"></span>
+            </div>
+
+            @* 誕生日 *@
+            <div class="form-group">
+                <label asp-for="Birth" class="control-label"></label>
+                <input asp-for="Birth" class="form-control" />
+                <span asp-validation-for="Birth" class="text-danger"></span>
+            </div>
+            @* メールニュースの要否 *@
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="NeedNews" /> @Html.DisplayNameFor(model => model.NeedNews)
+                </label>
+            </div>
+            @* Createボタン *@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

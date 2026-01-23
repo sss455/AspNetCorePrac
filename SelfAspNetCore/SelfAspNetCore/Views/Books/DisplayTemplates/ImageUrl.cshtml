@@ -1,0 +1,10 @@
+﻿@model System.String
+
+@* p.128 [Add] Html.DisplarForメソッド対応の自作テンプレート *@
+@* 与えられたISBNコードの値に対して、ImageUrl型のプロパティを<img>要素として出力する *@
+@* <img src="https://wings.msn.to/books/@(Model)/@(Model)_logo.jpg" alt="@Model" /> *@
+@* <img src="https://wings.msn.to/books/@(Model)/@(Model)_logo.jpg" alt="[No Image]" /> *@
+
+@* DisplayForメソッドから自作テンプレートに対して追加情報を渡すこともできる *@
+@* テンプレート側では、これをビュー変数として受け取れる *@
+<img src="https://wings.msn.to/books/@(Model)/@(Model)_logo.jpg" alt="[No Image]" width="@ViewBag.width" height="@ViewBag.height" />

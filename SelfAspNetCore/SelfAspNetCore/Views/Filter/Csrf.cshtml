@@ -1,0 +1,59 @@
+@* // p.417 [Add] JavaScriptアプリでのCSRF対策 *@
+
+@* (1) IAntiforgeryサービス(Antiforgery)を有効化 *@
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Antiforgery
+
+@{
+    ViewData["Title"] = "Csrf";
+
+    // (2) トークンを取得＆生成
+    var requestToken = Antiforgery.GetAndStoreTokens(Context).RequestToken;
+}
+
+
+<button id="btn1">送信(トークンあり)</button>
+@* (3) 生成したトークンを隠しフィールドとして埋め込む *@
+<input id="token" type="hidden" value="@requestToken" />
+
+<button id="btn2">送信(トークンなし)</button>
+
+
+<script>
+    // ボタンクリックイベント
+    document.getElementById('btn1').addEventListener('click', async () => {
+        // 非同期通信
+        await fetch('@Url.Action("Process")', {
+            method: 'POST',
+            headers: {
+                // (4) リクエストヘッダー「RequestVerificationToken」を追加（値は隠しフィールドのトークン値）
+                RequestVerificationToken: document.getElementById('token').value
+            }
+        });
+    });
+
+    document.getElementById('btn2').addEventListener('click', async () => {
+        await fetch('@Url.Action("Process")', {
+            method: 'POST'
+        });
+    });
+
+    @*
+    // ボタンクリックイベント
+    $('btn1').click(async () => {
+        // 非同期通信
+        await fetch('@Url.Action("Process")', {
+            method: 'POST',
+            headers: {
+                // (4) リクエストヘッダー「RequestVerificationToken」を追加（値は隠しフィールドのトークン値）
+                RequestVerificationToken: $('token').val
+            }
+        });
+    });
+
+    $('btn2').click(async () => {
+        await fetch('@Url.Action("Process")', {
+            method: 'POST',
+        });
+    }); 
+    *@
+</script>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <OpenWeather>
+    <ApiKey>eg23a58e94e9178</ApiKey>
+  </OpenWeather>
+</configuration>

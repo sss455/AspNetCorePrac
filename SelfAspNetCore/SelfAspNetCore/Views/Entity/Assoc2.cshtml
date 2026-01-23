@@ -1,0 +1,42 @@
+@* p.218 [Add] ナビゲーションプロパティへのアクセス（明示的読み込み） *@
+@model SelfAspNetCore.Models.Book
+@* テンプレート内でもデータベースコンテキストにアクセスできるように、MyContextを注入。
+   テンプレートでサービス（コンテキスト）を注入するのは、@injectディレクティブの役割。 *@
+@inject SelfAspNetCore.Models.MyContext _db
+
+@{
+    ViewData["Title"] = "Assoc2";
+}
+
+@*----------------------------------*@
+@* Books : Reviews : Authors : User *@
+@*   1   :    n                     *@
+@*   m        :         n           *@
+@*                      1    :   1  *@
+@*----------------------------------*@
+
+<h3>@Model.Title</h3>
+<ul>
+    <li>著者：
+        @* m:nの参照 *@
+        @foreach(var author in Model.Authors)
+        {
+            // 複数階層に及ぶアクセスを行うには、個々のエンティティを取り出したところで、さらに読み込みを指示する。
+            // Reference：参照ナビゲーション。「Authors:Users = 1:1」のため。
+            await _db.Entry(author).Reference(a => a.User).LoadAsync();
+
+                                 @* 1:1の参照 *@
+            @: @author.PenName（ @author.User.Name ) /
+        }
+    </li>
+    <li>価格：@Model.Price 円</li>
+    <li>出版社：@Model.Publisher</li>
+</ul>
+<hr />
+<ol>
+    @* 1:nの参照 *@
+    @foreach(var review in Model.Reviews)
+    {
+        <li>（@review.Name）@review.Body</li>
+    }
+</ol>

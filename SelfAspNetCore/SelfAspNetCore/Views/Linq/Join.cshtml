@@ -1,0 +1,14 @@
+@* p.285 [Add] エンティティ同士を結合するJoinメソッド（LINQメソッド構文） *@
+@using SelfAspNetCore.Models.Record
+@model IEnumerable<BookReviewView>
+
+@{
+    ViewData["Title"] = "Join";
+}
+
+<ul>
+    @foreach(var item in Model)
+    {
+        <li>【@item.Title】@item.ReviewBody</li>
+    }
+</ul>

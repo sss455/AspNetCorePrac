@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- p.52 [Add] SQL Server接続のためのライブラリ -->
+    <PackageReference Include="itext.font-asian" Version="8.0.2" />
+    <PackageReference Include="itext7" Version="8.0.2" />
+    <PackageReference Include="itext7.bouncy-castle-adapter" Version="8.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="8.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <!-- p.52 [Add] Scaffolding機能を実行するためのツール群 -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <!-- p.52 [Add] EF Core関連のコマンドを実行するためのツール群 -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <!-- p.52 [Add] ASP.NET Coreのコード生成のためのライブラリ -->
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Filters\" />
+    <Folder Include="Lib\MyActionResult\" />
+    <Folder Include="Lib\MyModelBinder\" />
+    <Folder Include="Lib\MyValueProvider\" />
+    <Folder Include="Lib\ValidationAttribute\" />
+    <Folder Include="Models\Interceptor\" />
+    <Folder Include="Views\Common\" />
+    <Folder Include="Views\Shared\Components\List\" />
+    <Folder Include="Views\Shared\Components\Meta\" />
+  </ItemGroup>
+
+</Project>

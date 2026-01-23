@@ -1,0 +1,21 @@
+﻿@* http://localhost:8080/tag/path *@
+@{
+    ViewData["Title"] = "Path";
+}
+
+■仮想パス（~/...）からアプリ絶対パスを生成<br />
+@@Url.Content("~/home/privacy")<br />
+&nbsp;&nbsp;↓<br />
+@Url.Content("~/home/privacy")                                           @* 結果：/home/privacy *@
+<br /><br />
+
+■「コントローラー／アクション名＋パラメーター値」からアプリ絶対パスを生成<br />
+@@Url.Action("Details", "Books", new { id="500", mode="dark" })<br />
+&nbsp;&nbsp;↓<br />
+@Url.Action("Details", "Books", new { id="500", mode="dark" })     @* 結果：/Books/Details/500?mode=dark *@
+<br /><br />
+
+■「ルート名(2.2.2項)＋パラメーター値」から絶対パスを生成<br />
+@@Url.RouteUrl("Default", new { Controller="Books", action="Edit", id=13 })<br />
+&nbsp;&nbsp;↓<br />
+@Url.RouteUrl("Default", new { Controller="Books", action="Edit", id=13 })  @* 結果：/Books/Edit/13 *@

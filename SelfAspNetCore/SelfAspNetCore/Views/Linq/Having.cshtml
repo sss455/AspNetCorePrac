@@ -1,0 +1,14 @@
+@* p.283 [Add] Having句に相当する「GroupBy＋Where」メソッド（LINQメソッド構文） *@
+@using SelfAspNetCore.Models.Record
+@model IEnumerable<HavingBook>
+
+@{
+    ViewData["Title"] = "Having";
+}
+
+<ul>
+    @foreach(var group in Model)
+    {
+        <li>@group.Publisher：@group.PriceAverage 円</li>
+    }
+</ul>

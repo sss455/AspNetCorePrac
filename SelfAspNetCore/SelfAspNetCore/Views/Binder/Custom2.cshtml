@@ -1,0 +1,13 @@
+@* p.396 [Add] 自作のモデルバインダーをアプリ全体に適用する *@
+@{
+    ViewData["Title"] = "Custom2";
+}
+
+<form asp-action="Custom2">
+    @* 本来のモデル名(ここではcurrent)に加えて「.year」「.month」「.day」で「年／月／日」を識別している *@
+    @* 自作のモデルバインダー固有のルールで、これでcurrentという名前で1つの日付としてまとめるようにする *@
+    <input type="text" name="current.year"  size="4" />年
+    <input type="text" name="current.month" size="2" />月
+    <input type="text" name="current.day"   size="2" />日
+    <input type="submit" value="送信" class="btn btn-primary" />
+</form>

@@ -1,0 +1,26 @@
+@* p.275 [Add] モデルビュー *@
+@model IEnumerable<SummaryBookView>
+
+@{
+    ViewData["Title"] = "Select";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ShortTitle)</th>
+            <th>@Html.DisplayNameFor(model => model.DiscountPrice)</th>
+            <th>@Html.DisplayNameFor(model => model.Released)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ShortTitle)</td>
+                <td>@Html.DisplayFor(modelItem => item.DiscountPrice)</td>
+                <td>@Html.DisplayFor(modelItem => item.Released)</td>
+            </tr>
+        }
+    </tbody>
+</table>

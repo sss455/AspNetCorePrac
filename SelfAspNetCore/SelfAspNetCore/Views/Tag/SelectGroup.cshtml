@@ -1,0 +1,8 @@
+@* http://localhost:8080/tag/selectgroup *@
+@model SelfAspNetCore.Models.Article
+
+@{
+    ViewData["Title"] = "SelectGroup";
+}
+
+<select asp-for="Url" asp-items="ViewBag.Opts" class="form-control"></select>

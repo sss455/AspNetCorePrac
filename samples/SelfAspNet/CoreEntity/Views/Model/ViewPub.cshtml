@@ -1,0 +1,8 @@
+@model IEnumerable<CoreEntity.Models.ViewPubCount>
+
+<ul>
+@foreach(var item in Model)
+{
+  <li>@item.Publisher ： @item.BookCount 冊</li>
+}
+</ul>

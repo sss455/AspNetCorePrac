@@ -1,0 +1,20 @@
+@* p.203 [Add] テンプレート化されたRazorデリゲート *@
+@model IEnumerable<SelfAspNetCore.Models.Book>
+
+@{
+    ViewData["Title"] = "List";
+
+    // Razorデリゲート
+    Func<dynamic, object> bookItem = 
+        // @テンプレート
+        @<li>
+            <a href="https://wings.msn.to/index.php/-/A-03/@item.Isbn/">@item.Title</a>
+        </li>;
+
+    <ul>
+        @foreach(var b in Model)
+        {
+            @bookItem(b)
+        }
+    </ul>
+}

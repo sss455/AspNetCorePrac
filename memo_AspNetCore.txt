@@ -1,0 +1,594 @@
+
+PS C:\Users\010159_numoto\AspNetCorePrac\samples\SelfAspNet\SelfAspNet> dotnet ef database update
+指定されたコマンドまたはファイルが見つからなかったため、実行できませんでした。
+これには、次のような理由が考えられます: 
+ * 組み込みの dotnet コマンドのスペルが間違っています。
+ * .NET プログラムを実行しようとしましたが、dotnet-ef が存在しません。
+ * グローバル ツールを実行しようとしましたが、この名前の dotnet プレフィックス付き実行可能ファイルが PATH に見つかりませんでした。
+
+
+
+PS C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore> dotnet tool install --global dotnet-ef
+ツール 'dotnet-ef' を更新できませんでした。原因:
+ツールの NuGet パッケージ内の設定ファイルが無効です: 設定ファイル 'DotnetToolSettings.xml' がパッケージで見つかりませんでした。
+ツール 'dotnet-ef' をインストールできませんでした。ツールの作成者にお問い合わせください。
+
+
+
+
+PS C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore> dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+  復元対象のプロジェクトを決定しています...
+  Writing C:\Users\010159_numoto\AppData\Local\Temp\tmputmbyh.tmp
+info : X.509 証明書チェーンの検証では、コード署名のために .NET によって選択された既定の信頼ストアが使用されます。
+info : X.509 証明書チェーンの検証では、タイムスタンプに .NET によって選択された既定の信頼ストアが使用されます。
+info : パッケージ 'Microsoft.EntityFrameworkCore.SqlServer' の PackageReference をプロジェクト 'C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj' に追加しています。
+info :   CACHE https://api.nuget.org/v3/registration5-gz-semver2/microsoft.entityframeworkcore.sqlserver/index.json
+info :   CACHE https://api.nuget.org/v3/registration5-gz-semver2/microsoft.entityframeworkcore.sqlserver/page/0.0.1-alpha/3.1.2.json
+info :   CACHE https://api.nuget.org/v3/registration5-gz-semver2/microsoft.entityframeworkcore.sqlserver/page/3.1.3/6.0.0-preview.6.21352.1.json
+info :   CACHE https://api.nuget.org/v3/registration5-gz-semver2/microsoft.entityframeworkcore.sqlserver/page/6.0.0-preview.7.21378.4/7.0.17.json
+info :   CACHE https://api.nuget.org/v3/registration5-gz-semver2/microsoft.entityframeworkcore.sqlserver/page/7.0.18/10.0.0-rc.2.25502.107.json
+info :   CACHE https://api.nuget.org/v3/registration5-gz-semver2/microsoft.entityframeworkcore.sqlserver/page/10.0.0/10.0.0.json
+info : C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj のパッケージを復元しています...
+info :   CACHE https://api.nuget.org/v3/vulnerabilities/index.json
+info :   CACHE https://api.nuget.org/v3-vulnerabilities/2025.12.03.23.35.17/vulnerability.base.json
+info :   CACHE https://api.nuget.org/v3-vulnerabilities/2025.12.03.23.35.17/2025.12.08.23.36.31/vulnerability.update.json
+error: NU1202: パッケージ Microsoft.EntityFrameworkCore.SqlServer 10.0.0 は net8.0 (.NETCoreApp,Version=v8.0) と互換性がありません。 パッケージ Microsoft.EntityFrameworkCore.SqlServer 10.0.0 がサポートするもの: net10.0 (.NETCoreApp,Version=v10.0)
+error: パッケージ 'Microsoft.EntityFrameworkCore.SqlServer' はプロジェクト 'C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj' の 'all' フレームワークとの互換性がありません。
+
+
+
+
+
+
+PS C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore> dotnet list package
+プロジェクト 'SelfAspNetCore' に次のパッケージ参照が含まれています
+   [net8.0]: このフレームワークのパッケージが見つかりませんでした。
+
+
+
+PS C:\Users\010159_numoto\AspNetCorePrac\samples\SelfAspNet\SelfAspNet> dotnet list package
+プロジェクト 'SelfAspNet' に次のパッケージ参照が含まれています
+   [net8.0]: 
+   最上位レベル パッケージ                                要求済み 解決済み 
+   > itext.font-asian                                      8.0.3   8.0.3
+   > itext7                                                8.0.3   8.0.3
+   > itext7.bouncy-castle-adapter                          8.0.3   8.0.3
+   > Microsoft.EntityFrameworkCore.Design                  8.0     8.0.0
+   > Microsoft.EntityFrameworkCore.Proxies                 8.0.1   8.0.1
+   > Microsoft.EntityFrameworkCore.SqlServer               8.0     8.0.0
+   > Microsoft.EntityFrameworkCore.Tools                   8.0     8.0.0
+   > Microsoft.Extensions.Caching.SqlServer                8.0.2   8.0.2
+   > Microsoft.VisualStudio.Web.CodeGeneration.Design      8.0     8.0.0
+
+
+
+
+
+
+
+ソリューションの NuGet パッケージを復元できませんでした。
+
+2025-12-09 13:02:33.402 [info] C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242: SDK リゾルバー エラー: "SDK "Microsoft.NET.SDK.WorkloadAutoImportPropsLocator" を解決しようとしているときに、SDK リゾルバー "Microsoft.DotNet.MSBuildWorkloadSdkResolver" に失敗しました。例外: "System.FormatException: The specified version does not contain a valid major, minor, and patch version: ''. [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.Deployment.DotNet.Releases.ReleaseVersion.TryParse(String input, Boolean throwOnFailure, ReleaseVersion& version) [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.Deployment.DotNet.Releases.ReleaseVersion.Parse(String input) [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.Deployment.DotNet.Releases.ReleaseVersion..ctor(String version) [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.NET.Sdk.WorkloadManifestReader.SdkDirectoryWorkloadManifestProvider.<>c.<FallbackForMissingManifest>b__23_1(String featureBand) [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at System.Linq.Utilities.<>c__DisplayClass2_0`3.<CombineSelectors>b__0(TSource x) [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at System.Linq.Enumerable.SelectArrayIterator`2.MoveNext() [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext() [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext() [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at System.Linq.Enumerable.WhereEnumerableIterator`1.ToList() [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source) [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.NET.Sdk.WorkloadManifestReader.SdkDirectoryWorkloadManifestProvider.FallbackForMissingManifest(String manifestId) [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.NET.Sdk.WorkloadManifestReader.SdkDirectoryWorkloadManifestProvider.GetManifests() [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.NET.Sdk.WorkloadManifestReader.WorkloadResolver.LoadManifestsFromProvider(IWorkloadManifestProvider manifestProvider) [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.NET.Sdk.WorkloadManifestReader.WorkloadResolver.InitializeManifests() [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.NET.Sdk.WorkloadManifestReader.WorkloadResolver.GetInstalledWorkloadPacksOfKind(WorkloadPackKind kind)+MoveNext() [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.NET.Sdk.WorkloadMSBuildSdkResolver.CachingWorkloadResolver.Resolve(String sdkReferenceName, IWorkloadManifestProvider manifestProvider, IWorkloadResolver workloadResolver) [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.NET.Sdk.WorkloadMSBuildSdkResolver.CachingWorkloadResolver.Resolve(String sdkReferenceName, String dotnetRootPath, String sdkVersion, String userProfileDir, String globalJsonPath) [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.NET.Sdk.WorkloadMSBuildSdkResolver.WorkloadSdkResolver.Resolve(SdkReference sdkReference, SdkResolverContext resolverContext, SdkResultFactory factory) [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+C:\Program Files\dotnet\sdk\8.0.416\Sdks\Microsoft.NET.Sdk\targets\Microsoft.NET.Sdk.ImportWorkloads.props(14,38): error MSB4242:    at Microsoft.Build.BackEnd.SdkResolution.SdkResolverService.TryResolveSdkUsingSpecifiedResolvers(IReadOnlyList`1 resolvers, Int32 submissionId, SdkReference sdk, LoggingContext loggingContext, ElementLocation sdkReferenceLocation, String solutionPath, String projectPath, Boolean interactive, Boolean isRunningInVisualStudio, SdkResult& sdkResult, IEnumerable`1& errors, IEnumerable`1& warnings)"" [C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore\SelfAspNetCore.csproj]
+
+
+
+
+
+
+
+
+
+PS C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore> dotnet ef migrations add Initial
+Build started...
+Build succeeded.
+Unable to create a 'DbContext' of type ''. The exception 'Unable to resolve service for type 'Microsoft.EntityFrameworkCore.DbContextOptions`1[SelfAspNetCore.Models.MyContext]' while attempting to activate 'SelfAspNetCore.Models.MyContext'.' was thrown while attempting to create an instance. For the different patterns supported at design time, see https://go.microsoft.com/fwlink/?linkid=851728
+
+
+
+
+
+
+
+
+
+
+
+
+
+■マイグレーションを追加
+dotnet ef migrations add AddAllTables
+
+・データベースに反映
+dotnet ef database update
+
+
+-------------------------
+[Key]
+[MaxLength(6)]
+public string Code { get; set; }
+
+-------------------------
+[PrimaryKey(nameof(Key1), nameof(Key2))]
+public class User {
+    public string Key1 { get; set; }
+    public string Key2 { get; set; }
+}
+
+-------------------------
+[Table("users")]
+public class User {
+    public string Key1 { get; set; }
+    public string Key2 { get; set; }
+}
+
+-------------------------
+[Column("user_id", TypeName = "text")]
+public string UserId { get; set; }
+
+-------------------------
+[MaxLength(255)]
+public string UserId { get; set; }
+
+[ForeignKey(nameof(UserId))]
+public User? User { get; set; }
+
+-------------------------
+[Index(nameof(UserId), nameof(CreatedAt), IsUnique = true)]
+public class User {
+
+-------------------------
+public string UserId { get; set; }
+
+[DeleteBehavior(DeleteBehavior.NoAction)]
+public User? User { get; set; }
+
+-------------------------
+
+
+INSERT INTO Articles (Title, Url, Category, CreatedAt, LastUpdatedAt) VALUES (N'ますます便利になるTypeScript！', 'https://codezine.jp/article/corner/992', 'JavaScript','2023/12/21','2023/12/22');
+INSERT INTO Articles (Title, Url, Category, CreatedAt, LastUpdatedAt) VALUES (N'Remixを通じてWebを学ぶ', 'https://codezine.jp/article/corner/942', 'JavaScript', '2023/12/23', '2023/12/24');
+INSERT INTO Articles (Title, Url, Category, CreatedAt, LastUpdatedAt) VALUES (N'Web Componentsを基礎から学ぶ', 'https://codezine.jp/article/corner/927', 'JavaScript', '2023/12/25', '2023/12/26');
+INSERT INTO Articles (Title, Url, Category, CreatedAt, LastUpdatedAt) VALUES (N'Railsの新機能を知ろう！', 'https://codezine.jp/article/corner/991', 'Rails', '2023/12/27', '2023/12/28');
+INSERT INTO Articles (Title, Url, Category, CreatedAt, LastUpdatedAt) VALUES (N'Railsによるクライアントサイド開発入門', 'https://codezine.jp/article/corner/919', 'Rails', '2023/12/29', '2023/12/30');
+INSERT INTO Articles (Title, Url, Category, CreatedAt, LastUpdatedAt) VALUES (N'現場で役立つRust入門', 'https://atmarkit.itmedia.co.jp/ait/series/36943/', 'Rust', '2023/12/31', '2024/1/1');
+INSERT INTO Articles (Title, Url, Category, CreatedAt, LastUpdatedAt) VALUES (N'基本からしっかり学ぶRust入門', 'https://atmarkit.itmedia.co.jp/ait/series/24844/', 'Rust', '2024/1/2', '2024/1/3');
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer b-wjzsj6mbdb="" class="border-top footer text-muted">
+    <div b-wjzsj6mbdb="" class="container">
+        © 2025 - SelfAspNetCore - <a href="/Home/Privacy">Privacy</a>
+    </div>
+</footer>
+
+
+
+.footer[b-wjzsj6mbdb] {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+
+
+
+
+
+-- ■Metas
+INSERT INTO Metas (Action, Content, Controller, Name) VALUES ('Privacy', N'メタ情報', 'Home', 'keywords');
+INSERT INTO Metas (Action, Content, Controller, Name) VALUES ('Privacy', N'ページごとに異なる<meta>要素を生成', 'Home', 'description');
+INSERT INTO Metas (Action, Content, Controller, Name) VALUES ('Index', N'メタ情報取得の別解', 'Tag', 'description');
+
+
+-- ■AuthorBook
+INSERT INTO AuthorBook (BooksId, AuthorsId) VALUES (1, 1);
+INSERT INTO AuthorBook (BooksId, AuthorsId) VALUES (1, 6);
+INSERT INTO AuthorBook (BooksId, AuthorsId) VALUES (2, 2);
+INSERT INTO AuthorBook (BooksId, AuthorsId) VALUES (3, 1);
+INSERT INTO AuthorBook (BooksId, AuthorsId) VALUES (4, 3);
+INSERT INTO AuthorBook (BooksId, AuthorsId) VALUES (5, 2);
+INSERT INTO AuthorBook (BooksId, AuthorsId) VALUES (6, 1);
+INSERT INTO AuthorBook (BooksId, AuthorsId) VALUES (7, 4);
+INSERT INTO AuthorBook (BooksId, AuthorsId) VALUES (8, 1);
+INSERT INTO AuthorBook (BooksId, AuthorsId) VALUES (9, 1);
+INSERT INTO AuthorBook (BooksId, AuthorsId) VALUES (10, 5);
+
+-- ■Author
+INSERT INTO Authors (PenName, UserId) VALUES (N'WINGS', 1);
+INSERT INTO Authors (PenName, UserId) VALUES (N'Sarva', 6);
+INSERT INTO Authors (PenName, UserId) VALUES (N'たまデジ。', 2);
+INSERT INTO Authors (PenName, UserId) VALUES (N'Canon', 5);
+INSERT INTO Authors (PenName, UserId) VALUES (N'Papier', 8);
+INSERT INTO Authors (PenName, UserId) VALUES (N'はな', 3);
+
+-- ■Review
+INSERT INTO Reviews (Body, BookId, LastUpdated, Name) VALUES (N'がっつり学習したい人には、うってつけの本です。前半は、キッチリ基礎固めを行い、後半は応用的な内容に。図や用例、構文も多く、辞書代わりにも使えます。', 1, '2024/2/2 00:00:00', N'山田太郎');
+INSERT INTO Reviews (Body, BookId, LastUpdated, Name) VALUES (N'環境構築から書かれており初心者から使えますが、分量から見てもわかるように、サラッとは終わらず、説明が深いです。特に「エキスパートに訊く」という読み物が面白い。', 1, '2024/3/1 00:00:00', N'佐藤花子');
+INSERT INTO Reviews (Body, BookId, LastUpdated, Name) VALUES (N'コツコツ、独りでじっくり勉強できます。オブジェクト指向プログラミングに紙数が割いてあって、以前、挫折したけど、今回は理解できました。1回目は読み飛ばしたところもあるので、また読み返したいです。', 1, '2024/3/1 00:00:00', N'鈴木次郎');
+INSERT INTO Reviews (Body, BookId, LastUpdated, Name) VALUES (N'Androidはすぐにバージョンが上がるので、本を買うのもためらわれるが、この本は、基礎部分がしっかり説明されているので、はじめの一冊にお勧めできます。', 2, '2023/11/1  00:00:00', N'井上裕子');
+INSERT INTO Reviews (Body, BookId, LastUpdated, Name) VALUES (N'同様の構成で、Kotlin対応とJava対応があるので、両方手元にあると比較しながら勉強できます。', 2, '2023/11/3 00:00:00', N'田中健太');
+INSERT INTO Reviews (Body, BookId, LastUpdated, Name) VALUES (N'テスト、TypeScriptの活用、Next.jsの活用などなど。実践的な内容盛りだくさんで、かなりのボリュームです。サンプルも多く、ダウンロードして実際に動かしながら確認できて、理解が深まります。', 2, '2023/12/1 00:00:00', N'藤井由美');
+
+-- ■User
+INSERT INTO Users (Birth, Email, Name, NeedNews) VALUES ('1980/ 1/ 1 00:00:00', 'yyamada@example.com', N'山田祥寛', 0);
+INSERT INTO Users (Birth, Email, Name, NeedNews) VALUES ('1970/ 4/ 10 00:00:00', 'nyamauchi@example.com', N'山内直', 0);
+INSERT INTO Users (Birth, Email, Name, NeedNews) VALUES ('1990/ 11/ 24 00:00:00', 'hsuzuki@example.com', N'鈴木花子', 0);
+INSERT INTO Users (Birth, Email, Name, NeedNews) VALUES ('1992/ 8/ 21 00:00:00', 'tsato@example.com', N'佐藤太郎', 0);
+INSERT INTO Users (Birth, Email, Name, NeedNews) VALUES ('1985/ 10/ 20 00:00:00', 'kkatafuchi@example.com', 'N片渕彼富', 0);
+INSERT INTO Users (Birth, Email, Name, NeedNews) VALUES ('1974/ 2/ 15 00:00:00', 'ssaito@example.com', N'齊藤新三', 0);
+INSERT INTO Users (Birth, Email, Name, NeedNews) VALUES ('2000/ 12/ 1 00:00:00', 'shanako@example.com', N'鈴木花子', 0);
+INSERT INTO Users (Birth, Email, Name, NeedNews) VALUES ('1978/ 6/ 30 00:00:00', 'ktakae@example.com', N'高江賢', 0);
+
+
+
+-- DBCC CHECKIDENT ('Authors', RESEED, 0);
+-- DBCC CHECKIDENT ('Articles', RESEED, 0);
+
+
+
+
+名前付き引数の指定を式ツリーに含めることはできません
+
+
+
+■Userエンティティを利用してScaffolding機能でページを自動生成
+dotnet aspnet-codegenerator controller -name UsersController -outDir Controllers -async -m User -dc MyContext -udl -scripts
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PS C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore> dotnet aspnet-codegenerator controller -name UsersController -outDir Controllers -async -m User -dc MyContext -udl -scripts
+Building project ...
+Finding the generator 'controller'...
+Running the generator 'controller'...
+
+Minimal hosting scenario!
+Attempting to compile the application in memory.
+Attempting to figure out the EntityFramework metadata for the model and DbContext: 'User'
+
+Using database provider 'Microsoft.EntityFrameworkCore.SqlServer'!
+
+Added Controller : '\Controllers\UsersController.cs'.
+Added View : \Views\Users\Create.cshtml
+Added View : \Views\Users\Edit.cshtml
+Added View : \Views\Users\Details.cshtml
+Added View : \Views\Users\Delete.cshtml
+Added View : \Views\Users\Index.cshtml
+RunTime 00:00:13.19
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+■Reviewエンティティを利用してScaffolding機能でページを自動生成
+dotnet aspnet-codegenerator controller -name ReviewsController -outDir Controllers -async -m Review -dc MyContext -udl -scripts
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PS C:\Users\010159_numoto\AspNetCorePrac\SelfAspNetCore\SelfAspNetCore> dotnet aspnet-codegenerator controller -name ReviewsController -outDir Controllers -async -m Review -dc MyContext -udl -scripts
+Building project ...
+Finding the generator 'controller'...
+Running the generator 'controller'...
+
+Minimal hosting scenario!
+Attempting to compile the application in memory.
+Attempting to figure out the EntityFramework metadata for the model and DbContext: 'Review'
+
+Using database provider 'Microsoft.EntityFrameworkCore.SqlServer'!
+
+Added Controller : '\Controllers\ReviewsController.cs'.
+Added View : \Views\Reviews\Create.cshtml
+Added View : \Views\Reviews\Edit.cshtml
+Added View : \Views\Reviews\Details.cshtml
+Added View : \Views\Reviews\Delete.cshtml
+Added View : \Views\Reviews\Index.cshtml
+RunTime 00:00:08.79
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/// <summary>
+/// An <see cref="IValueProvider"/> adapter for data stored in an <see cref="IQueryCollection"/>.
+/// </summary>
+public class QueryStringValueProvider : BindingSourceValueProvider, IEnumerableValueProvider
+{
+
+    /// <summary>
+    /// Creates a value provider for <see cref="IQueryCollection"/>.
+    /// </summary>
+    /// <param name="bindingSource">The <see cref="BindingSource"/> for the data.</param>
+    /// <param name="values">The key value pairs to wrap.</param>
+    /// <param name="culture">The culture to return with ValueProviderResult instances.</param>
+    public QueryStringValueProvider(
+
+
+
+
+
+
+/// <inheritdoc />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. 基本操作・エディタ管理
+エディタ自体の操作を素早く行うための基本項目です。
+コマンドパレットを開く	Ctrl + Shift + P
+クイックオープン (ファイル検索)	Ctrl + P
+サイドバーの表示/非表示	Ctrl + B
+新しいウィンドウを開く	Ctrl + Shift + N
+統合ターミナルの切り替え	Ctrl + ` (バッククォート)
+
+
+
+2. 編集・コーディング
+コードを書くスピードを劇的に上げるショートカットです。
+
+行の入れ替え: Alt + ↑ / ↓ （Mac: Opt + ↑ / ↓）
+
+選択した行をそのまま上下に移動させます。
+
+行のコピー: Shift + Alt + ↑ / ↓ （Mac: Shift + Opt + ↑ / ↓）
+
+現在行を上下に複製します。
+
+マルチカーソル: Ctrl + D （Mac: Cmd + D）
+
+現在選択している単語と同じ単語を、次々に選択状態にします（一括修正に便利）。
+
+行の削除: Ctrl + Shift + K （Mac: Cmd + Shift + K）
+
+コメントアウト: Ctrl + / （Mac: Cmd + /）
+
+
+
+3. ナビゲーション・検索
+コード内を縦横無尽に移動するための機能です。
+
+定義へ移動: F12
+
+定義を覗き見 (Peek): Alt + F12 （Mac: Opt + F12）
+
+画面を移動せずに、その場で関数の内容などを確認できます。
+
+シンボルへ移動: Ctrl + Shift + O （Mac: Cmd + Shift + O）
+
+ファイル内の関数や変数名の一覧を表示してジャンプします。
+
+対応する括弧へ移動: Ctrl + Shift + \ （Mac: Cmd + Shift + \）
+
+
+
+4. 画面分割・レイアウト
+画面を左右に分割: Ctrl + \ （Mac: Cmd + \）
+
+エディタグレープのフォーカス切り替え: Ctrl + 1, 2, 3
+
+エディタを閉じる: Ctrl + W （Mac: Cmd + W）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C# 開発に VS Code を使用する場合、「C# Dev Kit」 拡張機能を導入することで、Visual Studio に近い強力な開発体験が得られます。
+
+C# 特有の作業効率を爆上げするショートカットと、推奨設定をまとめました。
+
+
+
+
+1. C# 開発で必須のショートカット
+コードの修正やデバッグで頻繁に使う操作です。
+
+操作内容	Windows / Linux	macOS
+クイック修正 (Usingの追加など)	Ctrl + .	Cmd + .
+コードの自動整形	Shift + Alt + F	Shift + Opt + F
+ビルド (Build)	Ctrl + Shift + B	Cmd + Shift + B
+デバッグ開始	F5	F5
+すべての参照を検索	Shift + F12	Shift + F12
+シンボルの名前変更 (一括置換)	F2	F2
+
+
+
+
+2. C# 開発を快適にする「三種の神器」拡張機能
+VS Code で C# を書くなら、以下の拡張機能はほぼ必須です。
+
+
+1.C# Dev Kit: ソリューション管理（.sln）やテストエクスプローラー機能を追加します。
+
+2.IntelliCode for C# Dev Kit: AI による強力なコード補完を提供します。
+
+3..NET Install Tool: 適切な .NET ランタイムの管理を自動化します。
+
+
+
+
+3. C# 向けの便利な設定（settings.json）
+C# のコードをより読みやすくするために、以下の設定を有効にすることをお勧めします。
+
+・Inlay Hints (インレイヒント): 引数名や型推論（var）の実際の型をエディタ上に薄く表示します。
+
+・Format On Save: ファイル保存時に自動でコードを整形します。
+
+
+
+
+4. デバッグ時の Tips
+C# Dev Kit を入れている場合、F5 を押すだけで適切な launch.json が生成されます。デバッグ中は以下のキーを使い分けましょう。
+
+・F10 (ステップオーバー): 次の行へ進む（関数の中には入らない）
+
+・F11 (ステップイン): 関数の中に入る
+
+・Shift + F11 (ステップアウト): 今いる関数から抜ける
+
+
+
+
+
+
+
+
+
+■「コンテキスト（context）」という言葉は、ある処理やコードが“どんな状況・環境の中で実行されているか”を表す情報のまとまりを指します。
+
+ 分野別のコンテキストの使われ方
+1. 関数やメソッドのコンテキスト
+- どのオブジェクトから呼ばれたか
+- 変数のスコープ
+- this が何を指すか（JavaScript など）
+
+3. フレームワークのコンテキスト
+多くのフレームワークは「コンテキスト」を“便利な情報をまとめた入れ物”として提供します。
+例：Web フレームワーク（Flask, Express, Django など）
+- リクエスト情報
+- ユーザー情報
+- セッション
+- 設定
+
+4. 言語仕様としてのコンテキスト
+- コンパイル時のコンテキスト
+- 型推論のコンテキスト
+- 名前解決のコンテキスト
+
+まとめ
+プログラミングにおける「コンテキスト」は、
+“コードや処理が動くために必要な周辺情報のセット”
+と考えるとスッキリ理解できます。
+
+
+
+
+■プログラミングで「コンテナー（container）」という言葉は、**“データや処理をまとめて管理するための入れ物”**という広い意味で使われます。ただし、文脈によって指すものが大きく変わるので、代表的な使われ方を整理すると理解しやすくなります。
+
+📦 基本的な意味
+何かをまとめて保持し、扱いやすくする仕組み
+これがコンテナーの本質です。
+
+🧰 1. データ構造としてのコンテナー
+プログラミング言語でよく使われる意味です。
+- 配列（Array）
+- リスト（List）
+- マップ / 辞書（Map / Dictionary）
+- セット（Set）
+- キュー（Queue）
+- スタック（Stack）
+これらはすべて 複数のデータをまとめて保持する“コンテナー” と呼ばれます。
+
+🐳 2. 仮想化技術としてのコンテナー（Docker など）
+最近よく聞く「コンテナ」はこちら。
+- アプリケーションとその依存関係をひとまとめにした実行環境
+- OS 上で軽量に動く仮想化技術
+- どこでも同じ環境で動かせるのが強み
+例：Docker、Kubernetes で扱うコンテナ
+
+🧱 3. GUI や UI のコンテナー
+画面のレイアウトをまとめる入れ物。
+- HTML の <div>
+- Android の LinearLayout
+- SwiftUI の VStack など
+UI 要素をグループ化するための“コンテナー”です。
+
+🗂 4. フレームワークのコンテナー（DI コンテナなど）
+依存性注入（DI）で使われる「コンテナ」。
+- オブジェクトの生成やライフサイクルを管理する箱
+- Spring、Laravel、Angular などで使われる概念
+
+🎯 まとめ
+プログラミングにおける「コンテナー」は文脈によって意味が変わりますが、共通点はひとつ。
+“何かをまとめて管理するための入れ物”
+
+
+
+
+
+
+
+
+
+
