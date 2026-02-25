@@ -30,20 +30,20 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
                     //options.User.AllowedUserNameCharacters = ""; // ユーザー名に使用できる文字（既定は、半角英数字と記号 -._@+ ）
                     options.User.RequireUniqueEmail = false;       // 電子メールを必要とするか
                     /* SignInプロパティ */
-                    options.SignIn.RequireConfirmedAccount   = true;    // ログインに確認済みのアカウントが必要か   （既定はfalse）
+                    options.SignIn.RequireConfirmedAccount   = true;    // ログインに確認済みのアカウントが必要か    （既定はfalse）
                     options.SignIn.RequireConfirmedEmail       = false; // ログインに確認済みのメールアドレスが必要か（既定はfalse）
                     options.SignIn.RequireConfirmedPhoneNumber = false; // ログインに確認済みの電話番号が必要か
                     /* Passwordプロパティ */
-                    options.Password.RequireDigit           = true; // パスワードに数字を含める必要があるか  （既定はtrue）
-                    options.Password.RequiredLength         = 6;    // パスワードの最小長                   （既定６）
-                    options.Password.RequiredUniqueChars    = 1;    // パスワードに必須な一意の文字の最小数  （既定は１）
-                    options.Password.RequireLowercase       = true; // パスワードに小文字のASCIIが必須化    （既定はtrue）
-                    options.Password.RequireNonAlphanumeric = true; // パスワードに英数字以外の文字を含めるか（既定はtrue）
-                    options.Password.RequireUppercase       = true; // パスワードに大文字のASCII文字が必須化（既定はtrue）
+                    options.Password.RequireDigit           = true;  // パスワードに数字を含める必要があるか  （既定はtrue）
+                    options.Password.RequiredLength         = 6;     // パスワードの最小長                    （既定６）
+                    options.Password.RequiredUniqueChars    = 1;     // パスワードに必須な一意の文字の最小数  （既定は１）
+                    options.Password.RequireLowercase       = true;  // パスワードに小文字のASCIIが必須化     （既定はtrue）
+                    options.Password.RequireNonAlphanumeric = true;  // パスワードに英数字以外の文字を含めるか（既定はtrue）
+                    options.Password.RequireUppercase       = true;  // パスワードに大文字のASCII文字が必須化 （既定はtrue）
                     /* Lockoutプロパティ */
-                    options.Lockout.AllowedForNewUsers      = true; // 新規ユーザーをロックアウトできるか（既定はtrue）
-                    options.Lockout.DefaultLockoutTimeSpan  = new TimeSpan(5); // ロックされる時間     （既定は５）
-                    options.Lockout.MaxFailedAccessAttempts = 5;    // ロックされるまでのアクセス試行回数（既定は５）
+                    options.Lockout.AllowedForNewUsers      = true;  // 新規ユーザーをロックアウトできるか（既定はtrue）
+                    options.Lockout.DefaultLockoutTimeSpan  = new TimeSpan(5);  // ロックされる時間       （既定は５）
+                    options.Lockout.MaxFailedAccessAttempts = 5;     // ロックされるまでのアクセス試行回数（既定は５）
                 })
                 // p.427 [Add]現在のアプリでロール機能を有効に設定（イディオム）
                 .AddRoles<IdentityRole>()

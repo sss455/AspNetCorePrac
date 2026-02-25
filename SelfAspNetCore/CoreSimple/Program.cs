@@ -55,8 +55,7 @@ app.Map("/current", appCurrent =>
     // 終端ミドルウェア
     appCurrent.Run( async context =>
     {
-        await context.Response.WriteAsync(
-                                $"<p>CurrentRun: {DateTime.Now.ToString()}</p>");
+        await context.Response.WriteAsync( $"<p>CurrentRun: {DateTime.Now.ToString()}</p>" );
     });
 });
 
@@ -68,8 +67,7 @@ app.Map("/random", appRandom =>
     appRandom.Run( async context =>
     {
         var r = new Random();
-        await context.Response.WriteAsync(
-                                $"<p>RandomRun: {r.NextInt64(100)}</p>");
+        await context.Response.WriteAsync( $"<p>RandomRun: {r.NextInt64(100)}</p>" );
     });
 });
 

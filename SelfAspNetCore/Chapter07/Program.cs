@@ -45,15 +45,15 @@ builder.Services.AddTransient<IBookRepository, BookRepository>();
 // p.450 [Add] サービスのスコープ（有効期間）
 // それぞれのスコープでサービスを登録
 builder.Services.AddSingleton<ISingletonService, SingletonService>(); // AddSingleton：初回要求時に生成されたインスタンスを、アプリ起動中は維持。
-builder.Services.AddScoped<IScopedService, ScopedService>();          // AddScoped   ：リクエスト単位で1つ、インスタンスを生成。
+builder.Services.AddScoped<   IScopedService,    ScopedService>();    // AddScoped   ：リクエスト単位で1つ、インスタンスを生成。
 builder.Services.AddTransient<ITransientService, TransientService>(); // AddTransient：注入の都度、インスタンスを生成。
 
 
 // p.453 [Add] AddSingleton／AddScoped／AddTransientメソッドのオーバーロード
 // +--------------------------------------------+----------+---------+
-// |                 メソッド                    | 複数実装 |   引数   |
+// |                 メソッド                   | 複数実装 |   引数  |
 // +--------------------------------------------+----------+---------+
-// |  AddSingleton <IService, Impl>()           |    〇    |    ✕    |
+// |  AddSingleton <IService, Impl>()           |    〇    |    ✕   |
 // |     AddScoped <IService, Impl>()           |          |         |
 // |  AddTransient <IService, Impl>()           |          |         |
 // +--------------------------------------------+----------+---------+
@@ -61,7 +61,7 @@ builder.Services.AddTransient<ITransientService, TransientService>(); // AddTran
 // |     AddScoped <IService>(sp = new Impl())  |          |         |
 // |  AddTransient <IService>(sp = new Impl())  |          |         |
 // +--------------------------------------------+----------+---------+
-// |  AddSingleton <Impl>()                     |    ✕    |    ✕    |
+// |  AddSingleton <Impl>()                     |    ✕    |    ✕   |
 // |     AddScoped <Impl>()                     |          |         |
 // |  AddTransient <Impl>()                     |          |         |
 // +--------------------------------------------+----------+---------+

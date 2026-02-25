@@ -17,6 +17,7 @@ using SelfAspNetCore.Models;
 //===============================================================================================================================================
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Add services to the container.(訳)コンテナにサービスを追加する。
 //builder.Services.AddControllersWithViews();
 builder.Services.AddControllersWithViews(options =>
@@ -26,19 +27,24 @@ builder.Services.AddControllersWithViews(options =>
     // ※AddControllersWithViewsメソッドのラムダ式はMvcOptionsオブジェクトを受け取るので、
     //   そのValueProviderFactories.Addメソッドでファクトリークラスを追加するだけ。
 
+
     // p.396 [Add] アプリに自作のバインダープロバイダーを登録する
     // options.ModelBinderProviders.Insert(0, new DateModelBinderProvider());
+
 
     // p.401 [Add] アプリ単位でフィルターの適用
     // options.Filters.Add<MyLogAttribute>();
     // ※この例の場合は、属性としての宣言ではないので、フィルタークラスにAttributeクラスを継承する必要はない。
 
+
     // p.405 [Add] フィルターの優先順位を設定する（アプリ単位）
     // options.Filters.Add<MyAppFilterAttribute>(int.MaxValue);
+
 
     // p.416 [Add] アプリグローバルにCSRF対策を準備するーーAutoValidateAntiforgeryToken属性
     // options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
     // ここではアプリ単位に適用しているが、属性なのでコントローラー単位に適用しても構わない。
+
 
     // p.421 [Add] 応答キャッシュを有効にするーーResponseCache属性の主なプロパティ(ChacheProfileName属性)
     // ※あらかじめキャッシュポリシーをアプリに登録しておく（"MyCache"はキャッシュのプロファイル名）
@@ -46,12 +52,10 @@ builder.Services.AddControllersWithViews(options =>
         // CacheProfileクラスで利用できるプロパティはResponseCache属性のそれに準ずる
         Duration = 300 // 300秒
     });
-
-
 });
 
 
-// p.57 [Add] アプリにコンテキストを登録する
+// p.57 [Add] アプリにDBコンテキストを登録する
 //                           <MyContext>:コンテキスト型
 builder.Services.AddDbContext<MyContext>(options =>
     options
@@ -94,13 +98,13 @@ builder.WebHost.ConfigureKestrel(opts =>
 });
 
 
-// p.412 [Add] 依存性注入を伴うフィルター ーーServiceFilter属性
-// p.413 [Add] 依存性を伴うフィルター    ーーIFilterFactoryインターフェイス
+// p.412 [Add] 依存性注入を伴うフィルター ―― ServiceFilter属性
+// p.413 [Add] 依存性を伴うフィルター     ―― IFilterFactoryインターフェイス
 // フィルターをサービスとして登録
 builder.Services.AddScoped<LogExceptionFilter>();
 
 
-// p.420 [Add] 応答キャッシュを有効にするーーResponseCache属性の主なプロパティ(VaryByXxxxx属性)
+// p.420 [Add] 応答キャッシュを有効にする ―― ResponseCache属性の主なプロパティ(VaryByXxxxx属性)
 // ResponseChachingミドルウェアを有効に設定
 builder.Services.AddResponseCaching();
 
@@ -114,11 +118,10 @@ builder.Services
     .Bind( builder.Configuration.GetSection( nameof(MyAppOptions) ) );
     // ※サブセクションの取得
     //  「WebApplicationBuilderオブジェクト ＃ConfigrationManager   ＃GetSectionメソッド」
-    //   (builder)                         ＃Configrationプロパティ ＃GetSectionメソッド
+    //   (builder)                          ＃Configrationプロパティ＃GetSectionメソッド
 
 // // [別解] Configureメソッド
 // builder.Services.Configure<MyAppOptions>( builder.Configuration.GetSection( nameof(MyAppOptions) ) );
-
 
 
 
